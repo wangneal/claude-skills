@@ -1,6 +1,6 @@
 # Kingdee Dev Plugin - 金蝶开发插件
 
-类似 GSD 的 Claude Code 插件系统，专为金蝶苍穹开发设计。
+参考GSD编写的类似 GSD 的 Claude Code 插件系统，专为金蝶苍穹开发设计。
 
 ## 📋 项目结构
 
@@ -152,22 +152,11 @@ kingdee-dev-plugin
 # 切换到淘宝镜像
 npm config set registry https://registry.npmmirror.com/
 
-# 等待 10-30 分钟同步后安装
 npx kingdee-dev-plugin
 ```
 
-**注意**: 淘宝镜像同步需要 10-30 分钟，发布后请等待同步完成。
-
-**检查同步状态**: https://npmmirror.com/package/kingdee-dev-plugin
-
 ---
 
-### 方式 4: 指定源安装（国内推荐）
-
-```bash
-# 使用淘宝镜像但指定官方源下载
-npx --registry https://registry.npmjs.org/ kingdee-dev-plugin
-```
 
 ---
 
@@ -176,7 +165,7 @@ npx --registry https://registry.npmjs.org/ kingdee-dev-plugin
 安装完成后，在 Claude Code 中测试：
 
 ```
-用户: /kd:list
+/kd:list
 ```
 
 如果看到 SDK 模块列表，说明安装成功！
@@ -225,13 +214,6 @@ rm -rf ~/.claude/kingdee-dev
 
 3. **npm 包信息**: https://www.npmjs.com/package/kingdee-dev-plugin
 
-## 📚 资源来源
-
-本插件复用以下项目的资源：
-
-- **SDK 知识库**: 来自 `E:\projects\claude skills\.bos-flow\sdk\`
-- **开发规范**: 来自 `E:\projects\claude skills\.bos-flow\standards\`
-- **模板文件**: 来自 `E:\projects\claude skills\.bos-flow\templates\`
 
 ## 🔄 开发状态
 
@@ -271,33 +253,3 @@ MIT
 **灵感来源**: GSD (Get Shit Done)
 
 ---
-
-## 🗑️ 卸载
-
-如果要卸载插件：
-
-```bash
-# 删除 agents
-rm ~/.claude/agents/kd-*.md
-
-# 删除 skills
-rm -rf ~/.claude/skills/kd-*
-
-# 删除 engine
-rm -rf ~/.claude/kingdee-dev
-```
-
----
-
-## 📞 支持
-
-如果遇到问题：
-
-1. **查看文档**:
-   - [完整命令指南](./COMMANDS-GUIDE.md)
-   - [安装指南](./INSTALL.md)
-   - [NPM 同步说明](./NPM-SYNC-GUIDE.md)
-
-2. **GitHub Issues**: https://github.com/wangneal/claude-skills/issues
-
-3. **npm 包信息**: https://www.npmjs.com/package/kingdee-dev-plugin
