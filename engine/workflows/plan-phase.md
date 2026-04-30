@@ -16,8 +16,30 @@
 2. 加载需求列表
 3. 分析阶段依赖关系
 4. 提取关键技术关键词
+5. **扫描项目常量类** (新增)
+   - 使用 `engine/constant-scanner.js` 扫描现有常量类
+   - 识别 common 包中的常量
+   - 在规划时参考现有常量结构
 
-### 步骤 2: 自动研究 SDK（默认行为）
+### 步骤 2: 自动常量类扫描 (新增)
+
+**在规划阶段自动执行常量类扫描**：
+
+1. 扫描项目 src 目录下的 Java 文件
+2. 查找以 Cons/Con/Constant 结尾的常量类
+3. 优先识别 common 包中的常量
+4. 将扫描结果纳入规划上下文，供后续任务参考
+
+**扫描结果示例**：
+```
+| 类名 | 包名 | 路径 |
+|------|------|------|
+| 📁 UserRoleConstant | com.kingdee.common.constants | src/common/constants/UserRoleConstant.java |
+| 📁 SystemConstant | com.kingdee.common.constants | src/common/constants/SystemConstant.java |
+| 📄 DBCons | com.kingdee.db | src/db/DBCons.java |
+```
+
+### 步骤 3: 自动研究 SDK（默认行为）
 
 **重要：SDK研究是规划阶段的默认步骤，无需用户手动触发**
 
