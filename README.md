@@ -171,4 +171,42 @@ MIT
 
 **创建日期**: 2026-04-30
 **作者**: Neal
+**发布信息**:
+- **npm**: https://www.npmjs.com/package/kingdee-dev-plugin
+- **GitHub**: https://github.com/wangneal/claude-skills
+- **版本**: 1.0.0
+- **License**: MIT
+
 **灵感来源**: GSD (Get Shit Done)
+
+---
+
+## 🗑️ 卸载
+
+如果要卸载插件：
+
+```bash
+# 删除 agents
+rm ~/.claude/agents/kd-*.md
+
+# 删除 skills
+rm -rf ~/.claude/skills/kd-*
+
+# 删除 engine
+rm -rf ~/.claude/kingdee-dev
+```
+
+---
+
+## 📞 支持
+
+如果遇到问题：
+
+1. **查看文档**:
+   - [完整命令指南](./COMMANDS-GUIDE.md)
+   - [安装指南](./INSTALL.md)
+   - [NPM 同步说明](./NPM-SYNC-GUIDE.md)
+
+2. **GitHub Issues**: https://github.com/wangneal/claude-skills/issues
+
+3. **npm 包信息**: https://www.npmjs.com/package/kingdee-dev-plugin
