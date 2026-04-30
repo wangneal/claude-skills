@@ -64,10 +64,15 @@ async function installSkills() {
 
   const skills = [
     'kd-init',
+    'kd-discuss',
+    'kd-plan-phase',
+    'kd-execute-phase',
+    'kd-verify',
+    'kd-next',
     'kd-research',
     'kd-gen',
-    'kd-check',
     'kd-template',
+    'kd-check',
     'kd-list',
     'kd-doc'
   ];

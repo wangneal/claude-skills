@@ -1,7 +1,7 @@
 ---
 name: kd:plan-phase
 description: "规划金蝶开发阶段，生成详细的执行计划"
-argument-hint: "[阶段号] [--research]"
+argument-hint: "[阶段号] [--skip-research]"
 allowed-tools:
   - Read
   - Write
@@ -12,6 +12,9 @@ allowed-tools:
 
 <objective>
 为金蝶开发阶段生成详细的执行计划（PLAN.md），包括任务分解、依赖分析、验收标准。
+
+**重要：SDK研究是规划阶段的默认前置步骤**，在生成计划前会自动研究相关SDK。
+如需跳过研究，请使用 --skip-research 参数。
 </objective>
 
 <execution_context>
@@ -30,7 +33,7 @@ allowed-tools:
 用户: /kd:plan-phase
 ```
 
-自动检测下一个未规划的阶段并生成计划。
+自动检测下一个未规划的阶段并生成计划（默认先研究SDK）。
 
 ### 示例 2: 规划指定阶段
 
@@ -38,15 +41,15 @@ allowed-tools:
 用户: /kd:plan-phase 2
 ```
 
-规划第 2 阶段。
+规划第 2 阶段（默认先研究SDK）。
 
-### 示例 3: 强制重新研究
+### 示例 3: 跳过SDK研究
 
 ```
-用户: /kd:plan-phase 1 --research
+用户: /kd:plan-phase 1 --skip-research
 ```
 
-重新研究 SDK 后再规划。
+直接规划，跳过SDK研究步骤。
 
 </examples>
 
