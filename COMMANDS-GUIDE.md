@@ -165,6 +165,8 @@
 /kd:gen <插件类型>
 /kd:gen <插件类型> --class <类名>
 /kd:gen <插件类型> --class <类名> --entity <实体名>
+/kd:gen <插件类型> --class <类名> --enhanced  # 使用增强版模板（默认）
+/kd:gen <插件类型> --class <类名> --basic     # 使用基础模板
 ```
 
 **支持的插件类型**:
@@ -173,13 +175,54 @@
 - `OperationPlugin` - 操作插件
 - `BillPlugin` - 单据插件
 - `ReportPlugin` - 报表插件
+- `ListPlugin` - 列表插件（新增）⭐
+
+**增强版模板特性**:
+- ✅ **完整的生命周期方法** - 包含所有关键事件处理器
+- ✅ **自动常量引用** - 消除魔法值，使用常量类引用
+- ✅ **标准异常处理** - try-catch 异常处理模式
+- ✅ **日志记录集成** - Logger 日志记录最佳实践
+- ✅ **JavaDoc 注释** - 清晰的方法文档注释
 
 **示例**:
 ```
+# 表单插件
 /kd:gen FormPlugin
 /kd:gen FormPlugin --class SalesOrderPlugin
+
+# 工作流插件
 /kd:gen WorkflowPlugin --class ApprovalPlugin --entity kdev_order
+
+# 报表插件（新增）⭐
+/kd:gen ReportPlugin --class SalesReportPlugin
+/kd:gen ReportPlugin --class OrderReportPlugin --entity kdev_order
+
+# 列表插件（新增）⭐
+/kd:gen ListPlugin --class OrderListPlugin
+/kd:gen ListPlugin --class ProductListPlugin --entity kdev_product
+
+# 指定增强版或基础模板
+/kd:gen FormPlugin --class OrderPlugin --enhanced  # 显式指定增强版
+/kd:gen FormPlugin --class OrderPlugin --basic     # 使用基础模板
 ```
+
+**常量自动引用示例**:
+
+转换前:
+```java
+obj.set("status", "A");
+obj.set("name", "Test");
+String id = obj.getString("id");
+```
+
+转换后:
+```java
+obj.set(BaseCon.STATUS, BaseCon.STATUS_DRAFT);
+obj.set(BaseCon.NAME, "Test");
+String id = obj.getString(BaseCon.ID);
+```
+
+系统会自动扫描项目中的常量类（以 Cons/Con/Constant 结尾），并智能匹配常量引用。
 
 ---
 

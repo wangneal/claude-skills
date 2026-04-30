@@ -71,6 +71,160 @@ kingdee-dev-plugin/
 └── package.json                 # npm 包配置
 ```
 
+## ✨ 代码生成增强
+
+### 增强版模板特性
+
+- ✅ **完整的生命周期方法** - 包含所有关键事件处理器
+- ✅ **自动常量引用** - 消除魔法值，使用常量类引用
+- ✅ **标准异常处理** - try-catch 异常处理模式
+- ✅ **日志记录集成** - Logger 日志记录最佳实践
+- ✅ **JavaDoc 注释** - 清晰的方法文档注释
+
+### 使用方式
+
+```bash
+# 生成生产就绪的表单插件
+kd-gen FormPlugin --class MyFormPlugin --enhanced
+
+# 生成工作流插件
+kd-gen WorkflowPlugin --class MyWorkflowPlugin --enhanced
+
+# 指定包名和描述
+kd-gen FormPlugin --class OrderPlugin \
+  --package com.example.order.plugin \
+  --desc "订单表单插件"
+```
+
+### 常量自动引用
+
+系统会自动扫描项目中的常量类（以 Cons/Con/Constant 结尾），并在生成代码时自动引用：
+
+**转换前：**
+```java
+obj.set("status", "A");
+obj.set("name", "Test");
+```
+
+**转换后：**
+```java
+obj.set(BaseCon.STATUS, BaseCon.STATUS_DRAFT);
+obj.set(BaseCon.NAME, "Test");
+```
+
+### 支持的插件类型
+
+- **FormPlugin** - 表单插件（增强版）
+- **WorkflowPlugin** - 工作流插件（增强版）
+- **ReportPlugin** - 报表插件（增强版）
+- **ListPlugin** - 列表插件（增强版） ⭐ 新增
+- **OperationPlugin** - 操作插件
+- **BillPlugin** - 单据插件
+
+### 报表插件特性
+
+- ✅ **Algo API 集成** - 使用 Algo.create() 创建数据集
+- ✅ **DataSetBuilder** - 高效的数据集构建器
+- ✅ **RowMeta 自动生成** - 字段元数据自动定义
+- ✅ **QFilter 查询条件** - 灵活的查询条件构建
+- ✅ **常量字段引用** - 无魔法值，使用常量类
+- ✅ **完整的异常处理** - try-catch 异常处理
+- ✅ **日志记录** - Logger 日志记录
+- ✅ **JavaDoc 注释** - 清晰的方法文档
+
+### 列表插件特性
+
+- ✅ **分页查询支持** - 支持 startRow/pageSize 分页参数
+- ✅ **总记录数统计** - getTotalCount 方法获取总记录数
+- ✅ **QFilter 查询条件** - 灵活的查询条件构建
+- ✅ **排序条件构建** - buildSortCondition 支持动态排序
+- ✅ **过滤条件构建** - buildQueryFilter 支持日期、组织、状态过滤
+- ✅ **列表事件处理** - beforeLoadData/afterLoadData 事件钩子
+- ✅ **批量操作校验** - validateBeforeDelete/validateBeforeAudit
+- ✅ **导出数据查询** - queryExportData 支持全量导出
+- ✅ **常量字段引用** - 无魔法值，使用 ListCons 常量类
+- ✅ **完整的异常处理** - try-catch 异常处理
+- ✅ **日志记录** - Logger 日志记录
+- ✅ **JavaDoc 注释** - 清晰的方法文档
+
+**使用示例：**
+```bash
+# 生成列表插件
+kd-gen ListPlugin --class OrderListPlugin --enhanced
+
+# 指定包名和描述
+kd-gen ListPlugin --class ProductListPlugin \
+  --package com.example.product.plugin \
+  --desc "产品列表插件"
+```
+
+## 🛡️ 质量保证体系
+
+### 自动化检查
+
+- ✅ **魔法值检测** - 自动识别字符串和数字魔法值
+- ✅ **性能检查** - 检测循环数据库查询和 N+1 问题
+- ✅ **异常处理检查** - 验证异常处理完整性
+- ✅ **日志记录检查** - 验证日志记录规范
+- ✅ **JavaDoc 检查** - 检查公共方法文档
+- ✅ **SDK 使用检查** - 验证 API 使用正确性
+- ✅ **命名规范检查** - 检查类名、方法名、常量名
+
+### 异常处理模板
+
+提供 7+ 种异常处理场景模板：
+
+1. **基础异常处理** - try-catch 基础模式
+2. **带返回值的异常处理** - 方法返回值处理
+3. **数据保存异常处理** - 数据操作异常处理
+4. **数据查询异常处理** - 查询操作异常处理
+5. **批量操作异常处理** - 批量处理异常模式
+6. **事务性操作异常处理** - 事务控制异常处理
+7. **参数校验异常处理** - 参数验证异常处理
+
+### 日志记录模板
+
+提供 10+ 种日志记录场景模板：
+
+**日志级别**:
+- INFO - 关键操作日志
+- DEBUG - 调试信息日志
+- WARN - 警告信息日志
+- ERROR - 错误信息日志
+
+**业务场景**:
+- 方法入口/出口日志
+- 性能计时日志
+- 数据变更日志
+- 批量操作进度日志
+- 审批流程日志
+- API 调用日志
+
+### JavaDoc 自动生成
+
+自动生成符合规范的 JavaDoc 注释：
+
+```java
+/**
+ * 类名 - 类描述
+ *
+ * <p>创建日期：2026-04-30</p>
+ * <p>作者：Developer</p>
+ * <p>版本：1.0</p>
+ */
+
+/**
+ * 方法描述
+ * <p>用途：方法用途说明</p>
+ *
+ * @param paramName 参数描述
+ * @return 返回值描述
+ * @throws ExceptionType 异常描述
+ */
+```
+
+```
+
 ## 🎯 设计原则
 
 遵循 GSD 的三层架构：

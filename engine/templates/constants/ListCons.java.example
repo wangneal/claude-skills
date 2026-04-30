@@ -1,0 +1,206 @@
+package ${PACKAGE_NAME};
+
+/**
+ * 列表常量类
+ * 用于定义列表字段键值、排序字段、过滤字段等常量
+ *
+ * <p>说明：此类用于定义列表插件中使用的字段常量、排序规则和过滤条件</p>
+ *
+ * <p>创建日期：${DATE}</p>
+ * <p>作者：${AUTHOR}</p>
+ * <p>版本：1.0</p>
+ */
+public class ListCons {
+
+    // ===== 分页常量 =====
+
+    /** 默认每页记录数 */
+    public static final int DEFAULT_PAGE_SIZE = 20;
+
+    /** 最大每页记录数 */
+    public static final int MAX_PAGE_SIZE = 1000;
+
+    /** 最小每页记录数 */
+    public static final int MIN_PAGE_SIZE = 1;
+
+    // ===== 主键字段 =====
+
+    /** 主键 */
+    public static final String KEY_ID = "id";
+
+    // ===== 基础字段 =====
+
+    /** 名称 */
+    public static final String KEY_NAME = "name";
+
+    /** 编码 */
+    public static final String KEY_NUMBER = "number";
+
+    /** 单据编号 */
+    public static final String KEY_BILLNO = "billno";
+
+    /** 业务日期 */
+    public static final String KEY_BIZDATE = "bizdate";
+
+    /** 描述 */
+    public static final String KEY_DESCRIPTION = "description";
+
+    // ===== 状态字段 =====
+
+    /** 状态 */
+    public static final String KEY_STATUS = "status";
+
+    /** 审核状态 */
+    public static final String KEY_AUDIT_STATUS = "audit_status";
+
+    // ===== 组织字段 =====
+
+    /** 组织 */
+    public static final String KEY_ORG = "org";
+
+    /** 组织ID */
+    public static final String KEY_ORG_ID = "org_id";
+
+    /** 组织名称 */
+    public static final String KEY_ORG_NAME = "org_name";
+
+    /** 部门 */
+    public static final String KEY_DEPT = "dept";
+
+    /** 部门ID */
+    public static final String KEY_DEPT_ID = "dept_id";
+
+    /** 部门名称 */
+    public static final String KEY_DEPT_NAME = "dept_name";
+
+    // ===== 创建/修改字段 =====
+
+    /** 创建人 */
+    public static final String KEY_CREATOR = "creator";
+
+    /** 创建人ID */
+    public static final String KEY_CREATOR_ID = "creator_id";
+
+    /** 创建人名称 */
+    public static final String KEY_CREATOR_NAME = "creator_name";
+
+    /** 创建时间 */
+    public static final String KEY_CREATE_TIME = "createtime";
+
+    /** 修改人 */
+    public static final String KEY_MODIFIER = "modifier";
+
+    /** 修改人ID */
+    public static final String KEY_MODIFIER_ID = "modifier_id";
+
+    /** 修改人名称 */
+    public static final String KEY_MODIFIER_NAME = "modifier_name";
+
+    /** 修改时间 */
+    public static final String KEY_MODIFY_TIME = "modifytime";
+
+    // ===== 排序字段常量 =====
+
+    /** 按创建时间排序 */
+    public static final String SORT_CREATE_TIME = "createtime";
+
+    /** 按修改时间排序 */
+    public static final String SORT_MODIFY_TIME = "modifytime";
+
+    /** 按名称排序 */
+    public static final String SORT_NAME = "name";
+
+    /** 按编码排序 */
+    public static final String SORT_NUMBER = "number";
+
+    /** 按单据编号排序 */
+    public static final String SORT_BILLNO = "billno";
+
+    /** 按业务日期排序 */
+    public static final String SORT_BIZDATE = "bizdate";
+
+    /** 按状态排序 */
+    public static final String SORT_STATUS = "status";
+
+    /** 按组织排序 */
+    public static final String SORT_ORG = "org";
+
+    // ===== 过滤字段常量 =====
+
+    /** 过滤 - 开始日期 */
+    public static final String FILTER_START_DATE = "start_date";
+
+    /** 过滤 - 结束日期 */
+    public static final String FILTER_END_DATE = "end_date";
+
+    /** 过滤 - 组织ID */
+    public static final String FILTER_ORG_ID = "org_id";
+
+    /** 过滤 - 部门ID */
+    public static final String FILTER_DEPT_ID = "dept_id";
+
+    /** 过滤 - 状态 */
+    public static final String FILTER_STATUS = "status";
+
+    /** 过滤 - 关键字（用于模糊查询） */
+    public static final String FILTER_KEYWORD = "keyword";
+
+    /** 过滤 - 创建人ID */
+    public static final String FILTER_CREATOR_ID = "creator_id";
+
+    /** 过滤 - 修改人ID */
+    public static final String FILTER_MODIFIER_ID = "modifier_id";
+
+    /** 过滤 - 单据编号 */
+    public static final String FILTER_BILLNO = "billno";
+
+    /** 过滤 - 业务日期 */
+    public static final String FILTER_BIZDATE = "bizdate";
+
+    // ===== 查询字段列表 =====
+
+    /** 基础查询字段 */
+    public static final String[] BASE_QUERY_FIELDS = {
+        KEY_ID,
+        KEY_NAME,
+        KEY_NUMBER,
+        KEY_BILLNO,
+        KEY_STATUS,
+        KEY_ORG,
+        KEY_DEPT,
+        KEY_CREATOR,
+        KEY_CREATE_TIME,
+        KEY_MODIFIER,
+        KEY_MODIFY_TIME
+    };
+
+    /** 详细查询字段 */
+    public static final String[] DETAIL_QUERY_FIELDS = {
+        KEY_ID,
+        KEY_NAME,
+        KEY_NUMBER,
+        KEY_BILLNO,
+        KEY_BIZDATE,
+        KEY_STATUS,
+        KEY_ORG,
+        KEY_ORG_ID,
+        KEY_ORG_NAME,
+        KEY_DEPT,
+        KEY_DEPT_ID,
+        KEY_DEPT_NAME,
+        KEY_CREATOR,
+        KEY_CREATOR_ID,
+        KEY_CREATOR_NAME,
+        KEY_CREATE_TIME,
+        KEY_MODIFIER,
+        KEY_MODIFIER_ID,
+        KEY_MODIFIER_NAME,
+        KEY_MODIFY_TIME,
+        KEY_DESCRIPTION
+    };
+
+    // ===== 实体名称 =====
+
+    /** 实体名称（需要根据实际业务修改） */
+    public static final String ENTITY_NAME = "kdev_basedata";
+}
