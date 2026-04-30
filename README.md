@@ -124,24 +124,106 @@ kingdee-dev-plugin/
 
 ## 📦 安装
 
-### 方式 1: 自动安装（推荐）
+### 方式 1: npx 一键安装（推荐）
 
 ```bash
-node install.js
+npx kingdee-dev-plugin
 ```
 
-### 方式 2: 手动安装
+**说明**:
+- ✅ 自动从 npm 下载并安装
+- ✅ 适用于所有操作系统
+- ✅ 无需全局安装
+
+---
+
+### 方式 2: 全局安装
 
 ```bash
-# 1. 复制 agents
-cp -r agents/* ~/.claude/agents/
-
-# 2. 复制 skills
-cp -r skills/* ~/.claude/skills/
-
-# 3. 复制 engine
-cp -r engine ~/.claude/kingdee-dev
+npm install -g kingdee-dev-plugin
+kingdee-dev-plugin
 ```
+
+---
+
+### 方式 3: 使用淘宝镜像
+
+```bash
+# 切换到淘宝镜像
+npm config set registry https://registry.npmmirror.com/
+
+# 等待 10-30 分钟同步后安装
+npx kingdee-dev-plugin
+```
+
+**注意**: 淘宝镜像同步需要 10-30 分钟，发布后请等待同步完成。
+
+**检查同步状态**: https://npmmirror.com/package/kingdee-dev-plugin
+
+---
+
+### 方式 4: 指定源安装（国内推荐）
+
+```bash
+# 使用淘宝镜像但指定官方源下载
+npx --registry https://registry.npmjs.org/ kingdee-dev-plugin
+```
+
+---
+
+### 安装后验证
+
+安装完成后，在 Claude Code 中测试：
+
+```
+用户: /kd:list
+```
+
+如果看到 SDK 模块列表，说明安装成功！
+
+---
+
+### 安装内容
+
+安装脚本会自动：
+
+- ✅ 复制 4 个 Agents 到 `~/.claude/agents/`
+- ✅ 复制 12 个 Skills 到 `~/.claude/skills/`
+- ✅ 复制核心引擎到 `~/.claude/kingdee-dev/`
+- ✅ 复制 SDK 知识库（783 个方法）
+- ✅ 复制代码模板和规范文档
+
+---
+
+## 🗑️ 卸载
+
+如果要卸载插件：
+
+```bash
+# 删除 agents
+rm ~/.claude/agents/kd-*.md
+
+# 删除 skills
+rm -rf ~/.claude/skills/kd-*
+
+# 删除 engine
+rm -rf ~/.claude/kingdee-dev
+```
+
+---
+
+## 📞 支持
+
+如果遇到问题：
+
+1. **查看文档**:
+   - [完整命令指南](./COMMANDS-GUIDE.md)
+   - [安装指南](./INSTALL.md)
+   - [NPM 同步说明](./NPM-SYNC-GUIDE.md)
+
+2. **GitHub Issues**: https://github.com/wangneal/claude-skills/issues
+
+3. **npm 包信息**: https://www.npmjs.com/package/kingdee-dev-plugin
 
 ## 📚 资源来源
 
@@ -161,7 +243,8 @@ cp -r engine ~/.claude/kingdee-dev
 - [x] 模板文件集成
 - [x] 安装脚本开发
 - [x] NPM 发布准备
-- [ ] 发布到 npm（待您操作）
+- [x] 发布到 npm ✅
+- [x] 推送到 GitHub ✅
 
 ## 📄 License
 
