@@ -1,0 +1,415 @@
+{
+  "modules": [
+    {
+      "id": "kd.bos",
+      "name": "核心框架",
+      "path": "kd_bos/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos/00_模块索引.md"
+        },
+        {
+          "name": "AbstractBillPlugIn",
+          "file": "AbstractBillPlugIn.md",
+          "methods": 1,
+          "path": "kd_bos/AbstractBillPlugIn.md"
+        },
+        {
+          "name": "AttachmentServiceHelper",
+          "file": "AttachmentServiceHelper.md",
+          "methods": 36,
+          "path": "kd_bos/AttachmentServiceHelper.md"
+        },
+        {
+          "name": "BusinessDataServiceHelper",
+          "file": "BusinessDataServiceHelper.md",
+          "methods": 28,
+          "path": "kd_bos/BusinessDataServiceHelper.md"
+        },
+        {
+          "name": "DataEntityBase",
+          "file": "DataEntityBase.md",
+          "methods": 18,
+          "path": "kd_bos/DataEntityBase.md"
+        },
+        {
+          "name": "DataEntityCollection",
+          "file": "DataEntityCollection.md",
+          "methods": 12,
+          "path": "kd_bos/DataEntityCollection.md"
+        },
+        {
+          "name": "DispatchServiceHelper",
+          "file": "DispatchServiceHelper.md",
+          "methods": 5,
+          "path": "kd_bos/DispatchServiceHelper.md"
+        },
+        {
+          "name": "DynamicObject",
+          "file": "DynamicObject.md",
+          "methods": 46,
+          "path": "kd_bos/DynamicObject.md"
+        },
+        {
+          "name": "DynamicObjectCollection",
+          "file": "DynamicObjectCollection.md",
+          "methods": 25,
+          "path": "kd_bos/DynamicObjectCollection.md"
+        },
+        {
+          "name": "MetadataServiceHelper",
+          "file": "MetadataServiceHelper.md",
+          "methods": 2,
+          "path": "kd_bos/MetadataServiceHelper.md"
+        },
+        {
+          "name": "PermissionServiceHelper",
+          "file": "PermissionServiceHelper.md",
+          "methods": 113,
+          "path": "kd_bos/PermissionServiceHelper.md"
+        },
+        {
+          "name": "PrintServiceHelper",
+          "file": "PrintServiceHelper.md",
+          "methods": 36,
+          "path": "kd_bos/PrintServiceHelper.md"
+        },
+        {
+          "name": "QueryServiceHelper",
+          "file": "QueryServiceHelper.md",
+          "methods": 15,
+          "path": "kd_bos/QueryServiceHelper.md"
+        },
+        {
+          "name": "TimeServiceHelper",
+          "file": "TimeServiceHelper.md",
+          "methods": 25,
+          "path": "kd_bos/TimeServiceHelper.md"
+        },
+        {
+          "name": "UserServiceHelper",
+          "file": "UserServiceHelper.md",
+          "methods": 92,
+          "path": "kd_bos/UserServiceHelper.md"
+        },
+        {
+          "name": "WorkflowServiceHelper",
+          "file": "WorkflowServiceHelper.md",
+          "methods": 139,
+          "path": "kd_bos/WorkflowServiceHelper.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.algo",
+      "name": "算法",
+      "path": "kd_bos_algo/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_algo/00_模块索引.md"
+        },
+        {
+          "name": "Algo",
+          "file": "Algo.md",
+          "methods": 13,
+          "path": "kd_bos_algo/Algo.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.algox",
+      "name": "算法扩展",
+      "path": "kd_bos_algox/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_algox/00_模块索引.md"
+        },
+        {
+          "name": "AlgoX",
+          "file": "AlgoX.md",
+          "methods": 2,
+          "path": "kd_bos_algox/AlgoX.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.db",
+      "name": "数据库",
+      "path": "kd_bos_db/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_db/00_模块索引.md"
+        },
+        {
+          "name": "DB",
+          "file": "DB.md",
+          "methods": 17,
+          "path": "kd_bos_db/DB.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.dlock",
+      "name": "分布式锁",
+      "path": "kd_bos_dlock/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_dlock/00_模块索引.md"
+        },
+        {
+          "name": "DLock",
+          "file": "DLock.md",
+          "methods": 8,
+          "path": "kd_bos_dlock/DLock.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.exception",
+      "name": "异常处理",
+      "path": "kd_bos_exception/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_exception/00_模块索引.md"
+        },
+        {
+          "name": "ErrorCode",
+          "file": "ErrorCode.md",
+          "methods": 4,
+          "path": "kd_bos_exception/ErrorCode.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.extplugin",
+      "name": "扩展插件",
+      "path": "kd_bos_extplugin/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_extplugin/00_模块索引.md"
+        },
+        {
+          "name": "PluginCall",
+          "file": "PluginCall.md",
+          "methods": 1,
+          "path": "kd_bos_extplugin/PluginCall.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.fileservice",
+      "name": "文件服务",
+      "path": "kd_bos_fileservice/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_fileservice/00_模块索引.md"
+        },
+        {
+          "name": "BatchDownloadRequest",
+          "file": "BatchDownloadRequest.md",
+          "methods": 8,
+          "path": "kd_bos_fileservice/BatchDownloadRequest.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.formula",
+      "name": "公式",
+      "path": "kd_bos_formula/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_formula/00_模块索引.md"
+        },
+        {
+          "name": "FormulaEngine",
+          "file": "FormulaEngine.md",
+          "methods": 8,
+          "path": "kd_bos_formula/FormulaEngine.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.id",
+      "name": "ID服务",
+      "path": "kd_bos_id/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_id/00_模块索引.md"
+        },
+        {
+          "name": "ID",
+          "file": "ID.md",
+          "methods": 11,
+          "path": "kd_bos_id/ID.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.logging",
+      "name": "日志",
+      "path": "kd_bos_logging/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_logging/00_模块索引.md"
+        },
+        {
+          "name": "Log",
+          "file": "Log.md",
+          "methods": 24,
+          "path": "kd_bos_logging/Log.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.mq",
+      "name": "kd_bos_mq",
+      "path": "kd_bos_mq/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_mq/00_模块索引.md"
+        },
+        {
+          "name": "MQFactory",
+          "file": "MQFactory.md",
+          "methods": 3,
+          "path": "kd_bos_mq/MQFactory.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.mutex",
+      "name": "kd_bos_mutex",
+      "path": "kd_bos_mutex/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_mutex/00_模块索引.md"
+        },
+        {
+          "name": "DataMutex",
+          "file": "DataMutex.md",
+          "methods": 11,
+          "path": "kd_bos_mutex/DataMutex.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.orm",
+      "name": "kd_bos_orm",
+      "path": "kd_bos_orm/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_orm/00_模块索引.md"
+        },
+        {
+          "name": "ORM",
+          "file": "ORM.md",
+          "methods": 46,
+          "path": "kd_bos_orm/ORM.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.servicehelper",
+      "name": "kd_bos_servicehelper",
+      "path": "kd_bos_servicehelper/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_servicehelper/00_模块索引.md"
+        },
+        {
+          "name": "BusinessDataServiceHelper",
+          "file": "BusinessDataServiceHelper.md",
+          "methods": 28,
+          "path": "kd_bos_servicehelper/BusinessDataServiceHelper.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.threads",
+      "name": "kd_bos_threads",
+      "path": "kd_bos_threads/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_threads/00_模块索引.md"
+        },
+        {
+          "name": "ThreadPool",
+          "file": "ThreadPool.md",
+          "methods": 5,
+          "path": "kd_bos_threads/ThreadPool.md"
+        }
+      ]
+    },
+    {
+      "id": "kd.bos.xdb",
+      "name": "kd_bos_xdb",
+      "path": "kd_bos_xdb/",
+      "classes": [
+        {
+          "name": "00_模块索引",
+          "file": "00_模块索引.md",
+          "methods": 0,
+          "path": "kd_bos_xdb/00_模块索引.md"
+        },
+        {
+          "name": "QueryTimeout",
+          "file": "QueryTimeout.md",
+          "methods": 1,
+          "path": "kd_bos_xdb/QueryTimeout.md"
+        }
+      ]
+    }
+  ],
+  "total_modules": 17,
+  "total_classes": 48,
+  "total_methods": 783,
+  "generated_at": "2026-04-29T14:41:36.323Z"
+}

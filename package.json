@@ -1,0 +1,59 @@
+{
+  "name": "kingdee-dev-plugin",
+  "version": "1.0.0",
+  "description": "金蝶苍穹开发插件 - 类似 GSD 的 Claude Code 插件系统，提供 SDK 研究、代码生成、规范检查等功能",
+  "main": "install.js",
+  "bin": {
+    "kingdee-dev-plugin": "./install.js",
+    "kd-init": "./install.js",
+    "kd-research": "./install.js"
+  },
+  "scripts": {
+    "postinstall": "node install.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "kingdee",
+    "bos",
+    "cosmic",
+    "claude-code",
+    "claude",
+    "plugin",
+    "sdk",
+    "code-generation",
+    "standards",
+    "chinese",
+    "金蝶",
+    "苍穹",
+    "工作流"
+  ],
+  "author": "Neal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neal/kingdee-dev-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neal/kingdee-dev-plugin/issues"
+  },
+  "homepage": "https://github.com/neal/kingdee-dev-plugin#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "agents/",
+    "skills/",
+    "engine/",
+    "install.js",
+    "README.md",
+    "INSTALL.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "fs-extra": "^11.3.4"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}

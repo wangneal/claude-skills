@@ -1,0 +1,32 @@
+# Development files
+PROJECT-COMPLETE.md
+*.log
+.DS_Store
+Thumbs.db
+
+# Test files
+test/
+tests/
+*.test.js
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# CI
+.travis.yml
+.github/
+
+# Development configs
+.eslintrc
+.prettierrc
