@@ -98,7 +98,7 @@ kingdee-dev-plugin/
   - `init-project.md` - 初始化项目的详细流程
   - `research-sdk.md` - SDK 研究的详细流程
 
-## 🚀 可用命令（12 个）
+## 🚀 可用命令（13 个）
 
 ### 核心工作流（对标 GSD）
 - `/kd:init <项目名>` - 初始化金蝶项目
@@ -188,7 +188,7 @@ npx --registry https://registry.npmjs.org/ kingdee-dev-plugin
 安装脚本会自动：
 
 - ✅ 复制 4 个 Agents 到 `~/.claude/agents/`
-- ✅ 复制 12 个 Skills 到 `~/.claude/skills/`
+- ✅ 复制 13 个 Skills 到 `~/.claude/skills/`
 - ✅ 复制核心引擎到 `~/.claude/kingdee-dev/`
 - ✅ 复制 SDK 知识库（783 个方法）
 - ✅ 复制代码模板和规范文档
@@ -237,14 +237,22 @@ rm -rf ~/.claude/kingdee-dev
 
 - [x] 插件架构设计
 - [x] Agents 层创建（4 个）
-- [x] Skills 层创建（12 个）
-- [x] Workflows 层创建（6 个）
+- [x] Skills 层创建（13 个）
+- [x] Workflows 层创建（7 个）
 - [x] SDK 知识库集成（54 个文档，783 个方法）
 - [x] 模板文件集成
 - [x] 安装脚本开发
 - [x] NPM 发布准备
 - [x] 发布到 npm ✅
 - [x] 推送到 GitHub ✅
+- [x] 集成阿里巴巴Java开发规范 ✅ (v1.0.1)
+
+## 🆕 v1.0.1 更新内容
+
+- **集成阿里巴巴Java开发规范**: 新增并发规约、集合规约、MySQL规约、工程结构规约等补充规范
+- **优化 plan-phase 工作流**: SDK研究现在是默认前置步骤，使用 `--skip-research` 可跳过
+- **新增 plan-phase.md 工作流文件**: 完善规划阶段的执行流程
+- **规范冲突处理**: 与金蝶开发规范冲突的部分以金蝶规范为准
 
 ## 📄 License
 
@@ -257,7 +265,7 @@ MIT
 **发布信息**:
 - **npm**: https://www.npmjs.com/package/kingdee-dev-plugin
 - **GitHub**: https://github.com/wangneal/claude-skills
-- **版本**: 1.0.0
+- **版本**: 1.0.1
 - **License**: MIT
 
 **灵感来源**: GSD (Get Shit Done)
