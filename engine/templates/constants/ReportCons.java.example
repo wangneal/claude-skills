@@ -1,0 +1,188 @@
+package ${PACKAGE_NAME};
+
+/**
+ * 报表常量类
+ * 用于定义报表字段键值
+ *
+ * <p>说明：此类用于定义报表插件中使用的字段常量</p>
+ *
+ * <p>创建日期：${DATE}</p>
+ * <p>作者：${AUTHOR}</p>
+ * <p>版本：1.0</p>
+ */
+public class ReportCons {
+
+    // ===== 主键字段 =====
+
+    /** 主键 */
+    public static final String KEY_ID = "id";
+
+    // ===== 基础字段 =====
+
+    /** 名称 */
+    public static final String KEY_NAME = "name";
+
+    /** 编码 */
+    public static final String KEY_NUMBER = "number";
+
+    /** 单据编号 */
+    public static final String KEY_BILLNO = "billno";
+
+    /** 业务日期 */
+    public static final String KEY_BIZDATE = "bizdate";
+
+    // ===== 业务字段 =====
+
+    /** 数量 */
+    public static final String KEY_QTY = "qty";
+
+    /** 金额 */
+    public static final String KEY_AMOUNT = "amount";
+
+    /** 单价 */
+    public static final String KEY_PRICE = "price";
+
+    /** 税额 */
+    public static final String KEY_TAX = "tax";
+
+    /** 价税合计 */
+    public static final String KEY_TOTAL = "total";
+
+    // ===== 日期字段 =====
+
+    /** 日期 */
+    public static final String KEY_DATE = "date";
+
+    /** 开始日期 */
+    public static final String KEY_START_DATE = "start_date";
+
+    /** 结束日期 */
+    public static final String KEY_END_DATE = "end_date";
+
+    /** 创建日期 */
+    public static final String KEY_CREATE_DATE = "create_date";
+
+    /** 修改日期 */
+    public static final String KEY_MODIFY_DATE = "modify_date";
+
+    // ===== 状态字段 =====
+
+    /** 状态 */
+    public static final String KEY_STATUS = "status";
+
+    /** 审核状态 */
+    public static final String KEY_AUDIT_STATUS = "audit_status";
+
+    // ===== 组织字段 =====
+
+    /** 组织 */
+    public static final String KEY_ORG = "org";
+
+    /** 组织ID */
+    public static final String KEY_ORG_ID = "org_id";
+
+    /** 组织名称 */
+    public static final String KEY_ORG_NAME = "org_name";
+
+    /** 部门 */
+    public static final String KEY_DEPT = "dept";
+
+    /** 部门ID */
+    public static final String KEY_DEPT_ID = "dept_id";
+
+    /** 部门名称 */
+    public static final String KEY_DEPT_NAME = "dept_name";
+
+    /** 人员 */
+    public static final String KEY_PERSON = "person";
+
+    /** 人员ID */
+    public static final String KEY_PERSON_ID = "person_id";
+
+    /** 人员名称 */
+    public static final String KEY_PERSON_NAME = "person_name";
+
+    // ===== 物料字段 =====
+
+    /** 物料 */
+    public static final String KEY_MATERIAL = "material";
+
+    /** 物料ID */
+    public static final String KEY_MATERIAL_ID = "material_id";
+
+    /** 物料编码 */
+    public static final String KEY_MATERIAL_NUMBER = "material_number";
+
+    /** 物料名称 */
+    public static final String KEY_MATERIAL_NAME = "material_name";
+
+    /** 规格 */
+    public static final String KEY_SPEC = "spec";
+
+    /** 型号 */
+    public static final String KEY_MODEL = "model";
+
+    // ===== 单位字段 =====
+
+    /** 单位 */
+    public static final String KEY_UNIT = "unit";
+
+    /** 基本单位 */
+    public static final String KEY_BASE_UNIT = "base_unit";
+
+    /** 辅助单位 */
+    public static final String KEY_AUX_UNIT = "aux_unit";
+
+    // ===== 供应商/客户字段 =====
+
+    /** 供应商 */
+    public static final String KEY_SUPPLIER = "supplier";
+
+    /** 供应商ID */
+    public static final String KEY_SUPPLIER_ID = "supplier_id";
+
+    /** 供应商名称 */
+    public static final String KEY_SUPPLIER_NAME = "supplier_name";
+
+    /** 客户 */
+    public static final String KEY_CUSTOMER = "customer";
+
+    /** 客户ID */
+    public static final String KEY_CUSTOMER_ID = "customer_id";
+
+    /** 客户名称 */
+    public static final String KEY_CUSTOMER_NAME = "customer_name";
+
+    // ===== 仓库字段 =====
+
+    /** 仓库 */
+    public static final String KEY_WAREHOUSE = "warehouse";
+
+    /** 仓库ID */
+    public static final String KEY_WAREHOUSE_ID = "warehouse_id";
+
+    /** 仓库名称 */
+    public static final String KEY_WAREHOUSE_NAME = "warehouse_name";
+
+    // ===== 备注/说明字段 =====
+
+    /** 备注 */
+    public static final String KEY_REMARK = "remark";
+
+    /** 说明 */
+    public static final String KEY_DESCRIPTION = "description";
+
+    /** 摘要 */
+    public static final String KEY_SUMMARY = "summary";
+
+    // ===== 源单字段 =====
+
+    /** 源单ID */
+    public static final String KEY_SOURCE_ID = "source_id";
+
+    /** 源单编号 */
+    public static final String KEY_SOURCE_BILLNO = "source_billno";
+
+    /** 源单类型 */
+    public static final String KEY_SOURCE_TYPE = "source_type";
+}

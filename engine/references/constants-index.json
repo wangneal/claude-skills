@@ -1,0 +1,79 @@
+{
+  "BaseCon": {
+    "description": "基础常量类 - 系统通用字段和状态",
+    "location": "la51.da6l2.base.common.constant.BaseCon",
+    "fields": {
+      "ID": "主键",
+      "NAME": "名称",
+      "NUMBER": "编码",
+      "BILLNO": "单据编号",
+      "BIZDATE": "业务日期",
+      "BILL_STATUS": "单据状态",
+      "STATUS": "状态",
+      "BILL_STATUS_DRAFT": "草稿状态",
+      "BILL_STATUS_SUBMITTED": "已提交状态",
+      "BILL_STATUS_AUDITED": "已审核状态"
+    },
+    "usage": "在所有插件中广泛使用，提供标准字段名和状态常量"
+  },
+
+  "ProductCapacityCons": {
+    "description": "产能报表常量类",
+    "location": "la51.da6l2.mmc.pom.common.ProductCapacityCons",
+    "fields": {
+      "KEY_WORKSHOP": "车间",
+      "KEY_EQUIPMENT": "设备",
+      "KEY_PEOPLEMACHINE": "人机配置",
+      "KEY_QTY": "数量",
+      "KEY_PEOPLEQTY": "人员数量",
+      "KEY_STANDARD": "标准人力",
+      "KEY_DAYS": "天数",
+      "KEY_WORKSHIFTS": "班次",
+      "KEY_MACHINEHOURS": "机器工时",
+      "KEY_PEOPLEHOURS": "人工工时"
+    },
+    "usage": "产能负荷报表专用常量"
+  },
+
+  "ProcessPlanCons": {
+    "description": "工序计划常量类",
+    "location": "la51.da6l2.mmc.pom.common.ProcessPlanCons",
+    "fields": {
+      "KEY_WORKID": "工作ID",
+      "KEY_WORKROWID": "工作行ID",
+      "KEY_MATERIAL": "物料",
+      "KEY_QTY": "数量",
+      "KEY_PROCESSROUT": "工艺路线"
+    },
+    "usage": "工序计划相关插件使用"
+  },
+
+  "WorkCenterCons": {
+    "description": "工作中心常量类",
+    "location": "la51.da6l2.mmc.pom.common.WorkCenterCons",
+    "fields": {
+      "KEY_DEPARTID": "部门ID",
+      "KEY_RESOURCE": "资源"
+    },
+    "usage": "工作中心相关插件使用"
+  },
+
+  "ProductCapaCons": {
+    "description": "产能表常量类",
+    "location": "la51.da6l2.mmc.pom.common.ProductCapaCons",
+    "fields": {
+      "ENTRY": "分录",
+      "KEY_WORKSHOP": "车间"
+    },
+    "usage": "产能配置相关插件使用"
+  },
+
+  "ClassSystemCons": {
+    "description": "班制常量类",
+    "location": "la51.da6l2.mmc.pom.common.ClassSystemCons",
+    "fields": {
+      "ENTRY": "分录"
+    },
+    "usage": "班制配置相关插件使用"
+  }
+}

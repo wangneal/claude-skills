@@ -1,0 +1,1061 @@
+
+🔍 扫描项目: da6l2
+
+📁 找到 175 个 Java 文件
+
+  进度: 50/175
+  进度: 100/175
+  进度: 150/175
+
+✅ 扫描完成
+
+
+📊 扫描结果:
+
+{
+  "overview": {
+    "totalFiles": 175,
+    "pluginTypes": {
+      "FormPlugin": 5,
+      "ReportPlugin": 8
+    }
+  },
+  "sdkPatterns": {
+    "DynamicObject": {
+      "frequency": 688,
+      "commonMethods": [
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getInt(",
+        ".getInt(",
+        ".getInt(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getInt(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getDate(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getInt(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getInt(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getDate(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getDate(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getInt(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getDate(",
+        ".getDate(",
+        ".getLong(",
+        ".getDate(",
+        ".getDate(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getLong(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getString(",
+        ".getDate(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getInt(",
+        ".getInt(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getLong(",
+        ".getInt(",
+        ".getInt(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getDate(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getInt(",
+        ".getInt(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getLong(",
+        ".getInt(",
+        ".getInt(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getDate(",
+        ".getLong(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getDate(",
+        ".getLong(",
+        ".getDate(",
+        ".getDate(",
+        ".getLong(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getDate(",
+        ".getLong(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getDate(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getDate(",
+        ".getLong(",
+        ".getString(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getDate(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getDate(",
+        ".getDate(",
+        ".getString(",
+        ".getString(",
+        ".getString(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getString(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getBigDecimal(",
+        ".getLong(",
+        ".getDate(",
+        ".getLong(",
+        ".getLong(",
+        ".getLong(",
+        ".getBigDecimal(",
+        ".getBigDecimal("
+      ],
+      "patterns": []
+    },
+    "QFilter": {
+      "frequency": 80,
+      "commonMethods": [],
+      "patterns": [
+        "new QFilter(AttachCon.KEY_BILL_TYPE, QCP.equals,entity)",
+        "new QFilter(AttachCon.KEY_BILL_ID, QCP.in,ids)",
+        "new QFilter(AttachCon.KEY_BILL_TYPE, QCP.equals,entity)",
+        "new QFilter(AttachCon.KEY_BILL_ID, QCP.equals,id)",
+        "new QFilter(BaseCon.BILL_FORMID, QCP.equals, entity)",
+        "new QFilter(BaseCon.CREATEORG, QCP.equals, Long.parseLong(orgId)",
+        "new QFilter(BaseCon.ENABLE, QCP.equals, \"1\")",
+        "new QFilter(BaseCon.STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(CalendarCon.KEY_WORKSHOP, QCP.equals, 0L)",
+        "new QFilter(BaseCon.CREATEORG, QCP.equals, orgId)",
+        "new QFilter(BaseCon.ID, QCP.equals,id)",
+        "new QFilter(BaseCon.ID, QCP.equals,id)",
+        "new QFilter(BaseCon.ID, QCP.equals,pkId)",
+        "new QFilter(BaseCon.ID, QCP.in,pkIds)",
+        "new QFilter(BaseCon.ID, QCP.equals,pkId)",
+        "new QFilter(BaseCon.ID, QCP.in,pkIds)",
+        "new QFilter(BaseCon.NUMBER, QCP.equals,number)",
+        "new QFilter(BaseCon.FORMID, QCP.equals, billEntityName)",
+        "new QFilter(\"bal_obj\", \"=\", \"im_inv_realbalance\")",
+        "new QFilter(BaseCon.STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(BaseCon.ID, QCP.in, departIds)",
+        "new QFilter(BaseCon.ID, QCP.in, classSystemIds)",
+        "new QFilter(ProcessPlanCons.ENTRY_PLANBEGINTIME, QCP.large_equals, startDate)",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(ProcessPlanCons.KEY_SOURCEBILLNO, QCP.in, planOrderIds)",
+        "new QFilter(BaseCon.STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(BaseCon.ID, QCP.in, departIds)",
+        "new QFilter(\"id\", \"in\", deptIdsInPrdOrg)",
+        "new QFilter(\"status\", \"=\", \"C\")",
+        "new QFilter(\"enable\", \"=\", \"1\")",
+        "new QFilter(\"depttype\", \"!=\", \"B\")",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(\"Month(entryentity.planbegintime)",
+        "new QFilter(BaseCon.STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(BaseCon.ID, QCP.in, departIds)",
+        "new QFilter(\"Year(inspeenddate)",
+        "new QFilter(\"billentry.mainbillid\", QCP.in, purOrderIds)",
+        "new QFilter(\"billentry.mainbillid\", QCP.in, purOrderIds)",
+        "new QFilter(\"matintoentity.wbbillid\", QCP.in,  purOrderIds.stream()",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(\"id\", \"in\", materialIdList)",
+        "new QFilter(\"masterid\", \"in\", materialIdList)",
+        "new QFilter(\"treeentryentity.rootdemandbillno\", QCP.in, billNoSet)",
+        "new QFilter(\"billentry.srcbillnumber\", QCP.in, billNoSet)",
+        "new QFilter(\"entry.e_corebillno\", QCP.in, billNoSet)",
+        "new QFilter(BaseCon.BILL_STATUS, QCP.equals, BaseCon.BILL_STATUS_AUDITED)",
+        "new QFilter(\"material.id\", QCP.in, materialIdSet)",
+        "new QFilter(PlanOrderCons.KEY_DEMANDBILLID, QCP.in, orderIds.parallelStream()"
+      ]
+    },
+    "Algo": {
+      "frequency": 5,
+      "commonMethods": [],
+      "patterns": [
+        "Algo.create(algoKey)",
+        "Algo.create(algoKey)",
+        "Algo.create(algoKey)",
+        "Algo.create(algoKey)",
+        "Algo.create(algoKey)"
+      ]
+    }
+  },
+  "constants": {
+    "AttachMapCon": {
+      "usage": 36,
+      "fields": [
+        "KEY_NAME",
+        "KEY_RELATIVE_URL",
+        "KEY_DESC",
+        "KEY_TYPE",
+        "KEY_URL",
+        "KEY_UID",
+        "KEY_SIZE",
+        "KEY_PANEL",
+        "KEY_BILL_TYPE",
+        "KEY_BILL_ID",
+        "KEY_MODIFY_TIME",
+        "KEY_STATUS",
+        "KEY_CLIENT"
+      ]
+    },
+    "SettleTaskCon": {
+      "usage": 1,
+      "fields": [
+        "ENTITY"
+      ]
+    },
+    "ConCreateCon": {
+      "usage": 3,
+      "fields": [
+        "KEY_OBJECT",
+        "KEY_CON_SHOW"
+      ]
+    },
+    "BaseCon": {
+      "usage": 388,
+      "fields": [
+        "NUMBER",
+        "BILL_FORMID",
+        "ENABLE",
+        "IS_DEFAULT",
+        "MULTI_BASE",
+        "UTF_8",
+        "MODIFYTIME",
+        "CREATOR",
+        "ID",
+        "SEQ",
+        "MULTI_FPKID",
+        "MULTI_BASE_ID",
+        "BILLNO",
+        "SUFFIX_ZIP",
+        "CREATEORG",
+        "STATUS",
+        "BILL_STATUS_AUDITED",
+        "class",
+        "ISV_PRE",
+        "SQL_AS",
+        "NAME",
+        "ISLEAF",
+        "LEVEL",
+        "LONG_NUMBER",
+        "FULL_NAME",
+        "PARENT",
+        "NUM_1024",
+        "NUM_2048",
+        "SPLIT_STR",
+        "SCALE_4",
+        "TRUE",
+        "KEY_IGNORE_SYN_ISC_OP",
+        "FORMID",
+        "NUM_1000",
+        "ZH_CN",
+        "FILE",
+        "BILL_STATUS",
+        "BIZDATE",
+        "AUDITDATE",
+        "BILL_TYPE",
+        "CREATETIME",
+        "ORG"
+      ]
+    },
+    "AttachCon": {
+      "usage": 29,
+      "fields": [
+        "KEY_BILL_TYPE",
+        "KEY_BILL_ID",
+        "KEY_FILE_ID",
+        "KEY_NAME",
+        "KEY_SIZE",
+        "KEY_PANEL",
+        "ENTITY",
+        "STRING_UID",
+        "STRING_PATH",
+        "STRING_ATTACH"
+      ]
+    },
+    "ManagePrintTplCon": {
+      "usage": 3,
+      "fields": [
+        "ENTITY",
+        "KEY_PRINT_TPL_ID"
+      ]
+    },
+    "AttachFieldCon": {
+      "usage": 21,
+      "fields": [
+        "KEY_TYPE",
+        "ENTITY",
+        "KEY_NAME",
+        "KEY_SIZE",
+        "KEY_URL",
+        "KEY_NUMBER",
+        "KEY_UID",
+        "KEY_TEMP_FILE",
+        "KEY_SOURCE",
+        "KEY_ID",
+        "KEY_BILL_TYPE",
+        "KEY_STATUS"
+      ]
+    },
+    "SymbolCon": {
+      "usage": 52,
+      "fields": [
+        "MINUS",
+        "DOT",
+        "UNDERLINE",
+        "BRACKET_LEFT_CHN",
+        "BRACKET_RIGHT_CHN",
+        "BLANK_SPACE",
+        "BRACE_LEFT",
+        "BRACE_RIGHT",
+        "COMMA",
+        "EQUAL",
+        "PERCENT",
+        "NEW_LINE"
+      ]
+    },
+    "ChinaCon": {
+      "usage": 13,
+      "fields": [
+        "BILL_HEAD",
+        "BILL_ENTRY",
+        "FIELD",
+        "NUM",
+        "ROW",
+        "BILL_SUB_ENTRY",
+        "BILL_NO"
+      ]
+    },
+    "ControlCon": {
+      "usage": 4,
+      "fields": [
+        "ATTACH_PANEL",
+        "BOS_LIST_MOBILE",
+        "BOS_LIST",
+        "BILL_LIST_AP"
+      ]
+    },
+    "DateCon": {
+      "usage": 44,
+      "fields": [
+        "YYYYMMDDHHMMSS",
+        "YYYY_MM_DD",
+        "HH_MM_SS_00_00_00",
+        "HH_MM_SS_23_59_59",
+        "YYYY_MM_DD_HH_MM_SS",
+        "ZERO",
+        "THREE",
+        "SIX",
+        "NINE",
+        "TWO",
+        "YYYY"
+      ]
+    },
+    "HttpCon": {
+      "usage": 60,
+      "fields": [
+        "TIME_S_1800",
+        "TIME_S_600",
+        "TIME_OUT",
+        "COUNT_1000",
+        "TIME_MS_60_1000",
+        "COUNT_500",
+        "COUNT_50",
+        "COUNT_5000",
+        "COUNT_30",
+        "BOUNDARY",
+        "CONN_TYPE_JSON_TEXT",
+        "KEY_CONTENT_TYPE",
+        "CONN_TYPE_JSON_UTF8",
+        "KEY_ACCESS_TOKEN",
+        "KEY_API",
+        "CONN_TYPE_MULTIPART_BOUNDARY",
+        "STATUS",
+        "SUCCESS",
+        "URL",
+        "MESSAGE"
+      ]
+    },
+    "CalendarCon": {
+      "usage": 4,
+      "fields": [
+        "KEY_WORKSHOP",
+        "ENTITY"
+      ]
+    },
+    "strCons": {
+      "usage": 17,
+      "fields": [
+        "append",
+        "toString"
+      ]
+    },
+    "BotpCon": {
+      "usage": 19,
+      "fields": [
+        "LINK_HEAD",
+        "LINK_SBILLID",
+        "LINK_STABLEID",
+        "LINK_SENTRYID",
+        "LINK"
+      ]
+    },
+    "EncryptCon": {
+      "usage": 12,
+      "fields": [
+        "KEY_AES",
+        "KEY_AES_ECB_PKCS5PADDING",
+        "KEY_MD5",
+        "KEY_RSA",
+        "KEY_SHA_256"
+      ]
+    },
+    "PendingRefundCon": {
+      "usage": 1,
+      "fields": [
+        "ENTITY"
+      ]
+    },
+    "OperateCon": {
+      "usage": 3,
+      "fields": [
+        "MODIFY",
+        "SUBMIT"
+      ]
+    },
+    "PrintMetaCon": {
+      "usage": 1,
+      "fields": [
+        "ENTITY"
+      ]
+    },
+    "RealBalCons": {
+      "usage": 2,
+      "fields": [
+        "ENTITY"
+      ]
+    },
+    "RegularCon": {
+      "usage": 1,
+      "fields": [
+        "NUMBER"
+      ]
+    },
+    "AttachApiCon": {
+      "usage": 5,
+      "fields": [
+        "API_ATTACH_BIND_BILL",
+        "API_ATTACH_UPLOAD",
+        "API_ATTACH_UPLOAD_AND_BIND_PANEL"
+      ]
+    },
+    "AttachFieldApiCon": {
+      "usage": 2,
+      "fields": [
+        "API_BIND_HEAD",
+        "API_BIND_ENTRY"
+      ]
+    },
+    "MftOrderCons": {
+      "usage": 6,
+      "fields": [
+        "KEY_PLANENDTIME",
+        "KEY_ENTRYMATERIAL",
+        "ENTITY"
+      ]
+    },
+    "ProcessPlanCons": {
+      "usage": 53,
+      "fields": [
+        "ENTRY",
+        "ENTRY_PROCESSNUMBER",
+        "ENTRY_PROCESSCENTER",
+        "ENTRY_PLANENDTIME",
+        "ENTRY_PLANBEGINTIME",
+        "ENTRY_DATETIMEFIELD",
+        "ENTRY_DATETIMEFIELD1",
+        "ENTITY",
+        "ENTRY_PROCESSQTY",
+        "KEY_MATERIAL",
+        "ENTRY_MACHINE",
+        "KEY_SOURCEBILLNO",
+        "KEY_SOURCEBILLTYPE",
+        "ENTRY_PROCESSSEQUENCE",
+        "KEY_WORKID",
+        "KEY_WORKROWID",
+        "KEY_QTY",
+        "KEY_PROCESSROUT"
+      ]
+    },
+    "WorkCenterCons": {
+      "usage": 5,
+      "fields": [
+        "ENTITY",
+        "KEY_DEPARTID"
+      ]
+    },
+    "ProductCapaCons": {
+      "usage": 27,
+      "fields": [
+        "ENTRY_DEVICENUMBER",
+        "ENTRY_QTY",
+        "ENTITY",
+        "KEY_WORKSHOP",
+        "ENTRY_PEOPLEQTY",
+        "ENTRY_PEOPLEMACHINE",
+        "ENTRY_STANDARDLABOR",
+        "ENTRY"
+      ]
+    },
+    "WorkShopSetupCons": {
+      "usage": 5,
+      "fields": [
+        "ENTITY",
+        "KEY_CLASSSYSTEM"
+      ]
+    },
+    "ClassSystemCons": {
+      "usage": 5,
+      "fields": [
+        "ENTITY",
+        "ENTRY"
+      ]
+    },
+    "MaterialMftInfoCons": {
+      "usage": 13,
+      "fields": [
+        "KEY_STAWORHOURS",
+        "KEY_REPLACETIME",
+        "KEY_CODINGTIME",
+        "KEY_INSPECTIONLEADTIME"
+      ]
+    },
+    "EquimentCons": {
+      "usage": 1,
+      "fields": [
+        "ENTITY"
+      ]
+    },
+    "ProductCapacityCons": {
+      "usage": 23,
+      "fields": [
+        "ENTITY",
+        "KEY_WORKSHOPH",
+        "KEY_DATEH",
+        "KEY_WORKSHOP",
+        "KEY_EQUIPMENT",
+        "KEY_PEOPLEMACHINE",
+        "KEY_QTY",
+        "KEY_PEOPLEQTY",
+        "KEY_STANDARD",
+        "KEY_DAYS",
+        "KEY_WORKSHIFTS",
+        "KEY_MACHINEHOURS",
+        "KEY_PEOPLEHOURS",
+        "KEY_MACHINETOTALHOURS",
+        "KEY_PEOPLETOTALHOURS",
+        "KEY_MACHINEDEMAND",
+        "KEY_PEOPLEDEMAND",
+        "KEY_MACHINELOAD",
+        "KEY_PEOPLELOAD",
+        "KEY_MACHINEREMAIN",
+        "KEY_PEOPLEREMAIN"
+      ]
+    },
+    "InComingInspctCons": {
+      "usage": 16,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_EXPECTCOMPLETEDATE",
+        "ENTRY_INSPECTSTATUS",
+        "KEY_INSPEENDDATE",
+        "ENTRY_WBBILLID",
+        "ENTRY_SAMPLINGRESULT",
+        "ENTRY_MATERIALQTY",
+        "ENTRY_QUALIQTY",
+        "ENTRY_UNQUALIQTY"
+      ]
+    },
+    "InvBalInSpecCons": {
+      "usage": 4,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_INSPECTSTATUS",
+        "KEY_INSPEENDDATE"
+      ]
+    },
+    "ManuInSpecCons": {
+      "usage": 4,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_INSPECTSTATUS",
+        "KEY_INSPEENDDATE"
+      ]
+    },
+    "SaleInSpecCons": {
+      "usage": 4,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_INSPECTSTATUS",
+        "KEY_INSPEENDDATE"
+      ]
+    },
+    "OtherInSpecCons": {
+      "usage": 4,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_INSPECTSTATUS",
+        "KEY_INSPEENDDATE"
+      ]
+    },
+    "PlanCompletedRateRptCons": {
+      "usage": 15,
+      "fields": [
+        "KEY_CONTENT",
+        "KEY_JAN",
+        "KEY_FEB",
+        "KEY_MAR",
+        "KEY_APR",
+        "KEY_MAY",
+        "KEY_JUN",
+        "KEY_JUL",
+        "KEY_AUG",
+        "KEY_SEPT",
+        "KEY_OCT",
+        "KEY_NOV",
+        "KEY_DEC",
+        "KEY_DATE",
+        "KEY_INSPECTOR"
+      ]
+    },
+    "PurOrderBillCons": {
+      "usage": 16,
+      "fields": [
+        "ENTITY",
+        "KEY_CREATETIME",
+        "KEY_SUPPLIER",
+        "KEY_BIZTIME",
+        "ENTRY",
+        "ENTRY_QTY",
+        "ENTRY_RECEIVEQTY",
+        "ENTRY_INVQTY",
+        "ENTRY_UNINVQTY",
+        "ENTRY_DELIVERDATE"
+      ]
+    },
+    "PurReceiBillCons": {
+      "usage": 3,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_MAINBILLID"
+      ]
+    },
+    "PurInBillCons": {
+      "usage": 3,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_MAINBILLID"
+      ]
+    },
+    "PurOrderDeliveryRateRptCons": {
+      "usage": 30,
+      "fields": [
+        "KEY_STATUS",
+        "ENTITY",
+        "ENTRY_DATERANGESTART",
+        "ENTRY_DATERANGEEND",
+        "KEY_PROJECT",
+        "KEY_DATE",
+        "KEY_PURNUMBER",
+        "KEY_ORDERTYPE",
+        "KEY_SUPPLIER",
+        "KEY_MATERIAL",
+        "KEY_QTY",
+        "KEY_BATCHNUM",
+        "KEY_RECEIVEDQTY",
+        "KEY_INSTOCKQTY",
+        "KEY_UNSTOCKQTY",
+        "KEY_DELIVERDATE",
+        "KEY_RECEIPTNOTICEDATE",
+        "KEY_ARRIVALDATE",
+        "KEY_OVERDUEDAYS",
+        "KEY_DELIVERYRATE",
+        "KEY_PROJECTNAME",
+        "KEY_PROJECTNUMBER",
+        "KEY_PURORDERNUMBER",
+        "KEY_SUPPLIERNAME",
+        "KEY_MATERIALNUMBER",
+        "KEY_MATERIALNAME"
+      ]
+    },
+    "PurOrderStatusCons": {
+      "usage": 3,
+      "fields": [
+        "NORMAL",
+        "OVERDUE"
+      ]
+    },
+    "PurPassRateRptCons": {
+      "usage": 15,
+      "fields": [
+        "KEY_DATE",
+        "KEY_POBILLNO_B",
+        "KEY_SUPPLIER",
+        "KEY_QMNUM",
+        "KEY_PASSNUM",
+        "KEY_NGNUM",
+        "KEY_BATCHPASSRATE",
+        "KEY_QTY",
+        "KEY_PASSQTY",
+        "KEY_NGQTY",
+        "KEY_QTYPASSRATE",
+        "ENTRY_DATERANGE_START",
+        "ENTRY_DATERANGE_END",
+        "KEY_POBILLNO",
+        "KEY_SUPPLIERNAME"
+      ]
+    },
+    "SampleResultCons": {
+      "usage": 2,
+      "fields": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "SaleOrderCon": {
+      "usage": 8,
+      "fields": [
+        "ENTITY",
+        "ENTRY",
+        "ENTRY_BOM",
+        "ENTRY_BASEQTY",
+        "KEY_BIZDATE"
+      ]
+    },
+    "ShowBomCon": {
+      "usage": 4,
+      "fields": [
+        "ENTRY",
+        "ENTRY_MATERIEL",
+        "ENTRY_UNIT",
+        "ENTRY_QTY"
+      ]
+    },
+    "XssalorderCon": {
+      "usage": 16,
+      "fields": [
+        "KEY_CHANGEREASON",
+        "KEY_BILLNO",
+        "KEY_CUSTOMER",
+        "ENTRY_QTY",
+        "ENTRY"
+      ]
+    },
+    "MftOrderCon": {
+      "usage": 1,
+      "fields": [
+        "ENTITY"
+      ]
+    },
+    "DelivernoticeCon": {
+      "usage": 13,
+      "fields": [
+        "KEY_CUSTOMER",
+        "KEY_COMMENT",
+        "ENTRY_SRCBILLNUMBER",
+        "ENTITY",
+        "ENTRY"
+      ]
+    },
+    "RecBillCon": {
+      "usage": 5,
+      "fields": [
+        "KEY_ITEMPAYER",
+        "KEY_TXT_DESCRIPTION",
+        "ENTRY_E_COREBILLNO",
+        "ENTITY"
+      ]
+    },
+    "SalMaterialAnalysCons": {
+      "usage": 14,
+      "fields": [
+        "KEY_SALORDERBILLNO",
+        "KEY_PRODUCT",
+        "KEY_QTY",
+        "KEY_UNIT",
+        "KEY_MATERIEL",
+        "KEY_DEADLINE",
+        "KEY_MATERIALUNIT",
+        "KEY_MATERIALQTY",
+        "KEY_STOCKQTY",
+        "ENTRY_DATERANGE_START",
+        "ENTRY_DATERANGE_END",
+        "KEY_PRODUCTNAME",
+        "KEY_MATERIALNAME"
+      ]
+    },
+    "BomCon": {
+      "usage": 2,
+      "fields": [
+        "ENTRY1"
+      ]
+    },
+    "PlanOrderCons": {
+      "usage": 6,
+      "fields": [
+        "KEY_DEMANDBILLID",
+        "ENTITY",
+        "KEY_ADVISEENDDATE"
+      ]
+    }
+  }
+}
