@@ -74,7 +74,8 @@ async function installSkills() {
     'kd-template',
     'kd-check',
     'kd-list',
-    'kd-doc'
+    'kd-doc',
+    'kd-analyze'
   ];
 
   for (const skill of skills) {
