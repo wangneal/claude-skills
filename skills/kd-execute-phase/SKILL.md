@@ -1,7 +1,7 @@
 ---
 name: kd:execute-phase
-description: "执行金蝶开发阶段的所有计划任务"
-argument-hint: "[阶段号] [--wave N]"
+description: "执行开发：执行阶段计划任务 [--wave N]"
+argument-hint: "<阶段号> [--wave N]"
 allowed-tools:
   - Read
   - Write
@@ -14,6 +14,12 @@ allowed-tools:
 <objective>
 执行金蝶开发阶段的所有计划任务，按 Wave 并行执行，自动提交代码和生成文档。
 </objective>
+
+<context>
+阶段: Phase 6 - 执行开发
+输入: 执行计划 (kd-plan 输出)
+输出: 代码文件, SUMMARY.md
+</context>
 
 <execution_context>
 @$HOME/.claude/kingdee-dev/workflows/execute-phase.md

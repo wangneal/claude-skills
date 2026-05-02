@@ -1,7 +1,7 @@
 ---
 name: kd:plan-phase
-description: "规划金蝶开发阶段，生成详细的执行计划"
-argument-hint: "[阶段号] [--skip-research]"
+description: "生成计划：创建阶段执行计划 (PLAN.md)"
+argument-hint: "<阶段号> [--skip-research]"
 allowed-tools:
   - Read
   - Write
@@ -16,6 +16,12 @@ allowed-tools:
 **重要：SDK研究是规划阶段的默认前置步骤**，在生成计划前会自动研究相关SDK。
 如需跳过研究，请使用 --skip-research 参数。
 </objective>
+
+<context>
+阶段: Phase 5 - 生成计划
+输入: 需求规格 (kd-spec 输出)
+输出: {N}-PLAN.md
+</context>
 
 <execution_context>
 @$HOME/.claude/kingdee-dev/workflows/plan-phase.md

@@ -1,7 +1,7 @@
 ---
 name: kd:discuss
-description: "与用户讨论金蝶开发需求，捕获设计决策"
-argument-hint: "[阶段号]"
+description: "需求讨论：捕获设计决策，生成 CONTEXT.md"
+argument-hint: "<阶段号>"
 allowed-tools:
   - Read
   - Write
@@ -11,6 +11,12 @@ allowed-tools:
 <objective>
 通过交互式讨论捕获金蝶开发的设计决策，生成 CONTEXT.md 文档。
 </objective>
+
+<context>
+阶段: Phase 3 - 需求讨论
+输入: 需求分析结果 (kd-analyze 输出)
+输出: {N}-CONTEXT.md
+</context>
 
 <execution_context>
 @$HOME/.claude/kingdee-dev/workflows/discuss-phase.md

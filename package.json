@@ -1,6 +1,6 @@
 {
   "name": "kingdee-dev-plugin",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "金蝶苍穹开发插件 - 类似 GSD 的 Claude Code 插件系统，提供 SDK 研究、代码生成、规范检查等功能",
   "main": "install.js",
   "bin": {
@@ -54,9 +54,11 @@
     "LICENSE"
   ],
   "dependencies": {
-    "fs-extra": "^11.3.4"
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "fs-extra": "^11.3.4",
+    "fuse.js": "^7.3.0"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }

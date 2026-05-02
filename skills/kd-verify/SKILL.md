@@ -1,7 +1,7 @@
 ---
 name: kd:verify
-description: "验证金蝶开发阶段的完成情况"
-argument-hint: "[阶段号]"
+description: "需求校验：验证需求实现是否满足验收标准"
+argument-hint: "<阶段号>"
 allowed-tools:
   - Read
   - Bash
@@ -11,6 +11,12 @@ allowed-tools:
 <objective>
 验证阶段是否达到验收标准，检查代码质量和功能完整性。
 </objective>
+
+<context>
+阶段: Phase 7 - 需求校验
+输入: 执行结果 (kd-execute 输出)
+输出: VERIFICATION.md
+</context>
 
 <execution_context>
 @$HOME/.claude/kingdee-dev/workflows/verify-phase.md

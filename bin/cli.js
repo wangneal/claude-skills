@@ -35,9 +35,9 @@ const program = new Command();
 
 // 主信息
 program
-  .name('bos-flow')
-  .description('金蝶苍穹开发工作流 - 标准化四阶段开发流程')
-  .version('1.0.0');
+  .name('kingdee-dev-plugin')
+  .description('金蝶开发工作流 - 八阶段开发流程')
+  .version('1.0.4');
 
 // ==================== 状态命令 ====================
 program
@@ -68,18 +68,30 @@ program
     console.log('');
   });
 
-// ==================== 初始化命令 ====================
+// ==================== 新建项目命令 ====================
 program
-  .command('init [name]')
-  .description('初始化新项目或理解现有项目')
+  .command('kd-new-project [name]')
+  .description('新建项目：初始化项目+理解项目结构 (Phase 1-2)')
   .option('-d, --description <desc>', '项目描述')
   .option('--skip-scan', '跳过项目扫描')
+  .option('-v, --verbose', '详细输出')
   .action(async (name, opts) => {
     const initModule = require('../lib/init');
+    console.log('\n📦 初始化项目...\n');
     await initModule.initProject(name || 'current', {
       description: opts.description,
       skipScan: opts.skipScan
     });
+
+    // 自动理解项目
+    if (!opts.skipScan) {
+      console.log('\n🔍 理解项目结构...\n');
+      const domainKnowledgeOrchestrator = require('../lib/domain-knowledge-orchestrator.js');
+      const orchestrator = new domainKnowledgeOrchestrator.DomainKnowledgeOrchestrator({ basePath: process.cwd() });
+      await orchestrator.initialize();
+      await orchestrator.understandProject(process.cwd());
+      console.log('\n✅ 项目初始化和理解完成\n');
+    }
   });
 
 // ==================== 研究命令 ====================
@@ -177,8 +189,8 @@ function isComplexRequirement(requirement) {
 
 // ==================== 需求讨论命令 ====================
 program
-  .command('discuss-phase <phase>')
-  .description('启动需求讨论流程，捕获实施决策')
+  .command('kd-discuss <phase>')
+  .description('需求讨论：捕获设计决策 (Phase N)')
   .option('--auto', '自动选择推荐答案')
   .option('--text', '使用纯文本模式（适合远程会话）')
   .option('--mode <mode>', '讨论模式：discuss 或 assumptions', 'discuss')
@@ -209,8 +221,8 @@ program
 
 // ==================== 需求规格生成命令 ====================
 program
-  .command('spec-phase <phase>')
-  .description('生成需求规格文档，包含模糊度评分')
+  .command('kd-spec <phase>')
+  .description('需求规格：生成详细规格 (Phase N)')
   .option('--auto', '自动选择推荐默认值')
   .option('--text', '使用纯文本模式')
   .action(async (phase, opts) => {
@@ -433,7 +445,32 @@ program
 
 // ==================== KD 命令系列 ====================
 
-// kd-auto 命令（核心自动化命令）
+// kd-analyze 命令（需求分析 - 整合搜索+推荐+研究+约束生成）
+program
+  .command('kd-analyze <requirement>')
+  .description('需求分析：统一搜索+智能推荐+SDK研究+约束生成')
+  .option('-o, --output <dir>', '约束输出目录')
+  .option('-d, --deep', '深度研究（包含方法签名）')
+  .option('-i, --interactive', '交互模式')
+  .option('-l, --limit <number>', '限制推荐类数量', '5')
+  .option('--no-search', '禁用统一搜索')
+  .option('--no-recommend', '禁用智能推荐')
+  .option('--no-constraint', '禁用约束文件生成')
+  .action(async (requirement, opts) => {
+    const { KdAnalyze } = require('../lib/kd-analyze');
+    const analyzer = new KdAnalyze({ outputDir: opts.output });
+
+    await analyzer.execute(requirement, {
+      search: opts.search !== false,
+      recommend: opts.recommend !== false,
+      generateConstraint: opts.constraint !== false,
+      deep: opts.deep,
+      interactive: opts.interactive,
+      limit: parseInt(opts.limit)
+    });
+  });
+
+// kd-auto 命令（核心自动化命令 - 保留作为快捷方式）
 program
   .command('kd-auto <task>')
   .description('自动化 SDK 研究和约束生成')
@@ -633,9 +670,9 @@ program
     }
   });
 
-// ==================== 需求分析命令 ====================
+// ==================== 需求分析-搜索命令 ====================
 program
-  .command('search <query>')
+  .command('kd-search <query>')
   .description('统一搜索SDK文档和社区内容')
   .option('-s, --source <source>', '搜索来源: sdk, community, all', 'all')
   .option('-l, --limit <num>', '结果数量限制', '10')
@@ -677,9 +714,9 @@ program
     }
   });
 
-// ==================== 智能推荐命令 ====================
+// ==================== 需求分析-推荐命令 ====================
 program
-  .command('recommend <requirement>')
+  .command('kd-recommend <requirement>')
   .description('智能推荐SDK API和社区最佳实践')
   .option('-l, --limit <num>', '推荐数量限制', '5')
   .action(async (requirement, opts) => {
@@ -698,7 +735,7 @@ program
       console.log(`总推荐数: ${report.summary.total}`);
       console.log(`SDK API: ${report.summary.sdk_apis}`);
       console.log(`社区文章: ${report.summary.community_articles}`);
-      console.log(`置信度: ${(report.summary.confidence * 100).toFixed(1)}%`);
+      console.log(`置���度: ${(report.summary.confidence * 100).toFixed(1)}%`);
 
       if (report.sdk_apis.length > 0) {
         console.log(`\n### SDK API 推荐`);
@@ -859,47 +896,410 @@ ${s.code}
     }
   });
 
+// ==================== kd-add-phase 命令 ====================
+program
+  .command('kd-add-phase <description>')
+  .description('添加新阶段到当前里程碑')
+  .action(async (description) => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    const newPhaseId = fullState.phases.length + 1;
+    const slug = description.toLowerCase().replace(/\s+/g, '-').substring(0, 20);
+
+    fullState.phases.push({
+      id: newPhaseId,
+      name: description,
+      slug: slug,
+      status: 'pending'
+    });
+
+    state.saveState(fullState);
+    console.log(`\n✅ 已添加 Phase ${newPhaseId}: ${description}\n`);
+  });
+
+// ==================== kd-insert-phase 命令 ====================
+program
+  .command('kd-insert-phase <after> <description>')
+  .description('在指定阶段后插入新阶段')
+  .action(async (after, description) => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    const afterNum = parseInt(after);
+    const newPhaseId = afterNum + 0.1;
+    const slug = description.toLowerCase().replace(/\s+/g, '-').substring(0, 20);
+
+    // 插入新阶段
+    const newPhase = {
+      id: newPhaseId,
+      name: description,
+      slug: slug,
+      status: 'pending'
+    };
+
+    const insertIndex = fullState.phases.findIndex(p => p.id === afterNum) + 1;
+    fullState.phases.splice(insertIndex, 0, newPhase);
+
+    state.saveState(fullState);
+    console.log(`\n✅ 已插入 Phase ${newPhaseId}: ${description}\n`);
+  });
+
+// ==================== kd-remove-phase 命令 ====================
+program
+  .command('kd-remove-phase <number>')
+  .description('删除指定阶段并重新编号')
+  .action(async (number) => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    const phaseNum = parseFloat(number);
+    const index = fullState.phases.findIndex(p => p.id === phaseNum);
+
+    if (index === -1) {
+      console.log(`\n❌ 未找到 Phase ${phaseNum}\n`);
+      return;
+    }
+
+    const removed = fullState.phases.splice(index, 1)[0];
+    state.saveState(fullState);
+
+    console.log(`\n✅ 已删除 Phase ${phaseNum}: ${removed.name}\n`);
+  });
+
+// ==================== kd-new-milestone 命令 ====================
+program
+  .command('kd-new-milestone <name>')
+  .description('创建新里程碑')
+  .option('--reset', '重置阶段编号')
+  .action(async (name, opts) => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    console.log(`\n📦 创建新里程碑: ${name}\n`);
+
+    if (opts.reset) {
+      fullState.phases = fullState.phases.map(p => ({ ...p, status: 'pending' }));
+      console.log('✅ 阶段状态已重置\n');
+    }
+
+    fullState.milestone = name;
+    fullState.current_phase = 1;
+    state.saveState(fullState);
+
+    console.log(`里程碑: ${name}`);
+    console.log(`阶段数: ${fullState.phases.length}\n`);
+  });
+
+// ==================== kd-complete-milestone 命令 ====================
+program
+  .command('kd-complete-milestone <version>')
+  .description('完成里程碑并归档')
+  .action(async (version) => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    console.log(`\n📦 完成里程碑: ${fullState.milestone || '未命名'}\n`);
+    console.log(`版本: ${version}`);
+    console.log(`阶段数: ${fullState.phases.length}\n`);
+
+    // 统计完成情况
+    const completed = fullState.phases.filter(p => p.status === 'completed').length;
+    console.log(`完成进度: ${completed}/${fullState.phases.length}\n`);
+
+    console.log('✅ 里程碑已完成\n');
+  });
+
+// ==================== kd-progress 命令 ====================
+program
+  .command('kd-progress')
+  .description('查看项目进度')
+  .action(async () => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    console.log('\n📊 项目进度\n');
+    console.log(`里程碑: ${fullState.milestone || '未设置'}`);
+    console.log(`当前阶段: ${fullState.current_phase}\n`);
+
+    const total = fullState.phases.length;
+    const completed = fullState.phases.filter(p => p.status === 'completed').length;
+    const inProgress = fullState.phases.filter(p => p.status === 'in_progress').length;
+
+    console.log(`进度: ${completed}/${total} (${((completed/total)*100).toFixed(0)}%)\n`);
+
+    fullState.phases.forEach(p => {
+      const icon = p.status === 'completed' ? '✅' : p.status === 'in_progress' ? '🔄' : '⏳';
+      console.log(`${icon} Phase ${p.id}: ${p.name}`);
+    });
+    console.log('');
+  });
+
+// ==================== kd-resume 命令 ====================
+program
+  .command('kd-resume')
+  .description('恢复工作：显示当前状态和下一步')
+  .action(async () => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    console.log('\n🔄 恢复工作\n');
+    console.log(`项目: ${fullState.project || '未设置'}`);
+    console.log(`里程碑: ${fullState.milestone || '未设置'}`);
+    console.log(`当前阶段: ${fullState.current_phase}\n`);
+
+    // 找到下一个待处理的阶段
+    const nextPhase = fullState.phases.find(p => p.status === 'pending' || p.status === 'in_progress');
+    if (nextPhase) {
+      console.log(`下一步: kd-discuss ${nextPhase.id}\n`);
+    } else {
+      console.log('所有阶段已完成！\n');
+    }
+  });
+
+// ==================== kd-debug 命令 ====================
+program
+  .command('kd-debug [issue]')
+  .description('调试：系统性追踪问题')
+  .option('-v, --verbose', '详细输出')
+  .action(async (issue, opts) => {
+    const fs = require('fs');
+    const path = require('path');
+    const debugDir = path.join(process.cwd(), '.planning', 'debug');
+
+    if (!issue) {
+      // 恢复调试会话
+      console.log('\n🔍 恢复调试会话\n');
+      if (fs.existsSync(debugDir)) {
+        const files = fs.readdirSync(debugDir).filter(f => f.endsWith('.md'));
+        if (files.length > 0) {
+          console.log('调试记录:');
+          files.forEach(f => console.log(`  - ${f}`));
+        } else {
+          console.log('无调试记录');
+        }
+      } else {
+        console.log('无调试记录');
+      }
+      console.log('');
+      return;
+    }
+
+    // 创建新调试记录
+    await fs.promises.mkdir(debugDir, { recursive: true });
+    const slug = issue.toLowerCase().replace(/\s+/g, '-').substring(0, 30);
+    const debugFile = path.join(debugDir, `${slug}.md`);
+
+    const content = `# 调试记录: ${issue}
+
+## 问题描述
+${issue}
+
+## 调查步骤
+1. [ ] 收集症状
+2. [ ] 分析原因
+3. [ ] 验证假设
+4. [ ] 实施修复
+5. [ ] 验证修复
+
+## 状态
+进行中
+
+---
+创建时间: ${new Date().toISOString()}
+`;
+
+    await fs.promises.writeFile(debugFile, content, 'utf8');
+    console.log(`\n🔍 创建调试记录\n`);
+    console.log(`问题: ${issue}`);
+    console.log(`文件: ${debugFile}\n`);
+  });
+
+// ==================== kd-quick 命令 ====================
+program
+  .command('kd-quick [task]')
+  .description('快速任务：跳过规划直接执行')
+  .option('-f, --full', '完整流程')
+  .option('-v, --validate', '验证模式')
+  .action(async (task, opts) => {
+    if (!task) {
+      console.log('\n用法: kd-quick <任务描述>\n');
+      console.log('选项:');
+      console.log('  -f, --full      完整流程（讨论+研究+验证）');
+      console.log('  -v, --validate  验证模式\n');
+      return;
+    }
+
+    console.log('\n⚡ 快速任务\n');
+    console.log(`任务: ${task}\n`);
+
+    // 直接执行需求分析
+    const { KdAnalyze } = require('../lib/kd-analyze');
+    const analyzer = new KdAnalyze();
+    await analyzer.execute(task, {
+      search: true,
+      recommend: true,
+      generateConstraint: !opts.validate,
+      limit: 5
+    });
+
+    console.log('\n✅ 快速任务完成\n');
+  });
+
+// ==================== kd-fast 命令 ====================
+program
+  .command('kd-fast [description]')
+  .description('极速任务：内联执行，无规划文件')
+  .action(async (description) => {
+    if (!description) {
+      console.log('\n用法: kd-fast <任务描述>\n');
+      console.log('适用于: 修改错别字、配置更改、简单添加\n');
+      return;
+    }
+
+    console.log('\n🚀 极速任务\n');
+    console.log(`任务: ${description}\n`);
+    console.log('提示: 这是一个内联执行任务，不会创建规划文件\n');
+    console.log('✅ 任务已记录\n');
+  });
+
+// ==================== kd-do 命令 ====================
+program
+  .command('kd-do <description>')
+  .description('智能路由：自动匹配命令')
+  .action(async (description) => {
+    const text = description.toLowerCase();
+
+    console.log('\n🎯 智能路由\n');
+    console.log(`输入: ${description}\n`);
+
+    // 简单关键词匹配
+    let matched = null;
+
+    if (text.includes('新建') || text.includes('创建项目') || text.includes('初始化')) {
+      matched = 'kd-new-project';
+    } else if (text.includes('讨论') || text.includes('需求')) {
+      matched = 'kd-discuss';
+    } else if (text.includes('计划') || text.includes('规划')) {
+      matched = 'kd-plan';
+    } else if (text.includes('执行') || text.includes('开发')) {
+      matched = 'kd-execute';
+    } else if (text.includes('验证') || text.includes('测试')) {
+      matched = 'kd-verify';
+    } else if (text.includes('进度') || text.includes('状态')) {
+      matched = 'kd-progress';
+    } else if (text.includes('调试') || text.includes('修复') || text.includes('bug')) {
+      matched = 'kd-debug';
+    } else if (text.includes('搜索') || text.includes('查找')) {
+      matched = 'kd-search';
+    } else if (text.includes('推荐')) {
+      matched = 'kd-recommend';
+    } else if (text.includes('分析')) {
+      matched = 'kd-analyze';
+    } else {
+      matched = 'kd-quick';
+    }
+
+    console.log(`匹配命令: ${matched}\n`);
+    console.log(`执行: kingdee-dev-plugin ${matched}\n`);
+  });
+
+// ==================== kd-next 命令 ====================
+program
+  .command('kd-next')
+  .description('自动推进到下一阶段')
+  .action(async () => {
+    const state = require('../lib/state');
+    const fullState = state.loadState();
+
+    console.log('\n📊 当前项目状态\n');
+    console.log(`当前阶段: ${fullState.current_phase}\n`);
+
+    // 检查各阶段状态并推荐下一步
+    const phases = fullState.phases;
+    let nextAction = '';
+
+    for (const p of phases) {
+      if (p.status === 'pending') {
+        nextAction = `建议执行: kd-discuss ${p.id}`;
+        break;
+      } else if (p.status === 'in_progress') {
+        // 检查是否有 PLAN.md
+        const fs = require('fs');
+        const phaseDir = `.planning/phases/${String(p.id).padStart(2, '0')}-${p.slug}`;
+        const planFile = `${phaseDir}/${String(p.id).padStart(2, '0')}-PLAN.md`;
+
+        if (fs.existsSync(planFile)) {
+          nextAction = `建议执行: kd-execute ${p.id}`;
+        } else {
+          nextAction = `建议执行: kd-plan ${p.id}`;
+        }
+        break;
+      }
+    }
+
+    if (nextAction) {
+      console.log(`下一步: ${nextAction}\n`);
+    } else {
+      console.log('所有阶段已完成！\n');
+    }
+  });
+
 // ==================== 帮助 ====================
 program
   .command('help')
   .description('显示帮助')
   .action(() => {
     console.log(`
-📖 bos-flow 命令帮助
+📖 kingdee-dev-plugin 命令帮助
 
-基本命令:
-  status              查看项目状态
-  init <名称>         创建新项目
-  research <需求>     研究 SDK
-  analyze <需求>      语义分析需求
-  search <关键词>     统一搜索SDK和社区内容
-  template <模板>     复制模板
-  doc <类型>          生成文档
-  phase <N> <操作>    阶段管理
-  check <文件>        检查规范
+【工作流阶段 - 5阶段】
 
-KD 自动化命令:
-  kd-auto <任务>      自动化SDK研究与约束生成
-  kd-research <需求>  研究SDK相关功能
-  kd-gen <类名>       生成SDK约束文件
-  kd-list [模块]      列出SDK模块和类
+  kd-new-project         新建项目+理解项目 (Phase 1-2)
+  kd-discuss <N>         需求讨论：分析+讨论需求 → CONTEXT (Phase 3)
+  kd-plan <N>            生成计划：规格+计划 → PLAN.md (Phase 4)
+  kd-execute <N>         执行开发：执行计划任务 (Phase 5)
+  kd-verify <N>          验证UAT：需求校验+验收测试 (Phase 6)
+  kd-next                自动推进到下一阶段
 
-模板选项: planning, development, testing, uat, all
-文档选项: readme, changelog, api, all
-阶段操作: start, complete, status
+【里程碑管理】
+
+  kd-add-phase <描述>    添加新阶段
+  kd-insert-phase <N> <描述> 插入阶段
+  kd-remove-phase <N>    删除阶段
+  kd-new-milestone <名称> 创建新里程碑
+  kd-complete-milestone <版本> 完成里程碑
+  kd-progress            查看项目进度
+  kd-resume              恢复工作
+
+【快速任务】
+
+  kd-debug [问题]       调试：系统性追踪问题
+  kd-quick [任务]       快速任务：跳过规划直接执行
+  kd-fast [任务]        极速任务：内联执行
+  kd-do <描述>          智能路由：自动匹配命令
+
+【其他命令】
+
+  status                 查看项目状态
+  template <模板>        复制模板
+  check <文件>           检查规范
+
+【辅助命令】
+
+  kd-analyze <需求>      需求分析：搜索+推荐+SDK+约束
+  kd-search <关键词>     统一搜索
+  kd-recommend <需求>   智能推荐
+  kd-gen <类名>          生成SDK约束文件
+  kd-list [模块]         列出SDK模块和类
 
 示例:
-  bos-flow status
-  bos-flow init 我的项目
-  bos-flow analyze "订单交货及时率报表"
-  bos-flow research "工作流"
-  bos-flow template planning
-  bos-flow doc readme
-  bos-flow phase 1 start
-  bos-flow check src/Service.cs
-  bos-flow kd-auto "开发工作流审批功能"
-  bos-flow kd-gen DynamicObject
-  bos-flow kd-list
+  kingdee-dev-plugin kd-new-project
+  kingdee-dev-plugin kd-discuss 1
+  kingdee-dev-plugin kd-plan 1
+  kingdee-dev-plugin kd-execute 1
+  kingdee-dev-plugin kd-verify 1
+  kingdee-dev-plugin kd-next
 `);
   });
 
