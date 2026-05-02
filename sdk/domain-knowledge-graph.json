@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0",
+  "description": "金蝶领域知识图谱 - 基础实体和关系定义",
+  "lastUpdated": "2026-05-02",
+  "nodes": [
+    {
+      "id": "sale_order",
+      "label": "销售订单",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "销售订单",
+        "module": "销售",
+        "sdkClass": "SaleOrderInfo",
+        "tableName": "T_SAL_SaleOrder"
+      }
+    },
+    {
+      "id": "customer",
+      "label": "客户",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "客户",
+        "module": "销售",
+        "sdkClass": "CustomerInfo",
+        "tableName": "T_BD_Customer"
+      }
+    },
+    {
+      "id": "contract",
+      "label": "合同",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "合同",
+        "module": "销售",
+        "sdkClass": "ContractInfo",
+        "tableName": "T_CRM_Contract"
+      }
+    },
+    {
+      "id": "purchase_order",
+      "label": "采购订单",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "采购订单",
+        "module": "采购",
+        "sdkClass": "PurchaseOrderInfo",
+        "tableName": "T_PUR_PurchaseOrder"
+      }
+    },
+    {
+      "id": "supplier",
+      "label": "供应商",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "供应商",
+        "module": "采购",
+        "sdkClass": "SupplierInfo",
+        "tableName": "T_BD_Supplier"
+      }
+    },
+    {
+      "id": "inventory",
+      "label": "库存",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "库存",
+        "module": "库存",
+        "sdkClass": "InventoryInfo",
+        "tableName": "T_IM_Inventory"
+      }
+    },
+    {
+      "id": "warehouse",
+      "label": "仓库",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "仓库",
+        "module": "库存",
+        "sdkClass": "WarehouseInfo",
+        "tableName": "T_DB_Warehouse"
+      }
+    },
+    {
+      "id": "account",
+      "label": "科目",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "会计科目",
+        "module": "财务",
+        "sdkClass": "AccountInfo",
+        "tableName": "T_FIN_Account"
+      }
+    },
+    {
+      "id": "invoice",
+      "label": "发票",
+      "type": "business_entity",
+      "properties": {
+        "chineseName": "发票",
+        "module": "财务",
+        "sdkClass": "InvoiceInfo",
+        "tableName": "T_FIN_Invoice"
+      }
+    },
+    {
+      "id": "query_service",
+      "label": "查询服务",
+      "type": "sdk_service",
+      "properties": {
+        "chineseName": "查询服务",
+        "helperClass": "QueryServiceHelper",
+        "methods": ["query", "executeQuery", "getEntityData"]
+      }
+    },
+    {
+      "id": "business_data_service",
+      "label": "业务数据服务",
+      "type": "sdk_service",
+      "properties": {
+        "chineseName": "业务数据服务",
+        "helperClass": "BusinessDataServiceHelper",
+        "methods": ["save", "delete", "submit", "audit"]
+      }
+    },
+    {
+      "id": "workflow_service",
+      "label": "工作流服务",
+      "type": "sdk_service",
+      "properties": {
+        "chineseName": "工作流服务",
+        "helperClass": "WorkflowServiceHelper",
+        "methods": ["startWorkflow", "approve", "reject", "getWorkflowStatus"]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "sale_order",
+      "target": "customer",
+      "type": "belongs_to",
+      "label": "属于"
+    },
+    {
+      "source": "sale_order",
+      "target": "contract",
+      "type": "related_to",
+      "label": "关联"
+    },
+    {
+      "source": "purchase_order",
+      "target": "supplier",
+      "type": "belongs_to",
+      "label": "属于"
+    },
+    {
+      "source": "inventory",
+      "target": "warehouse",
+      "type": "located_in",
+      "label": "存放于"
+    },
+    {
+      "source": "invoice",
+      "target": "sale_order",
+      "type": "generated_from",
+      "label": "来源于"
+    },
+    {
+      "source": "sale_order",
+      "target": "query_service",
+      "type": "uses",
+      "label": "使用查询服务"
+    },
+    {
+      "source": "sale_order",
+      "target": "business_data_service",
+      "type": "uses",
+      "label": "使用业务数据服务"
+    },
+    {
+      "source": "sale_order",
+      "target": "workflow_service",
+      "type": "uses",
+      "label": "使用工作流服务"
+    }
+  ]
+}

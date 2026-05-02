@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-04-30",
+  "categories": [
+    {
+      "id": "naming",
+      "name": "命名规范",
+      "file": "naming-conventions.md",
+      "description": "类、方法、变量、常量命名规则",
+      "rules_count": 6,
+      "priority": "high"
+    },
+    {
+      "id": "format",
+      "name": "代码格式",
+      "file": "code-format.md",
+      "description": "缩进、空格、换行规范",
+      "rules_count": 6,
+      "priority": "medium"
+    },
+    {
+      "id": "comments",
+      "name": "注释规范",
+      "file": "comments.md",
+      "description": "类、方法注释要求",
+      "rules_count": 6,
+      "priority": "high"
+    },
+    {
+      "id": "exception",
+      "name": "异常处理",
+      "file": "exception-handling.md",
+      "description": "异常捕获和处理规范",
+      "rules_count": 6,
+      "priority": "high"
+    },
+    {
+      "id": "sdk",
+      "name": "SDK 使用",
+      "file": "sdk-usage.md",
+      "description": "金蝶 SDK 使用最佳实践",
+      "rules_count": 5,
+      "priority": "high"
+    },
+    {
+      "id": "business",
+      "name": "业务规则",
+      "file": "business-rules.md",
+      "description": "单据、工作流操作规范",
+      "rules_count": 6,
+      "priority": "high"
+    }
+  ],
+  "total_rules": 35,
+  "source": "星空旗舰版开发规范_技术_旗舰版_V1.0",
+  "notes": [
+    "本规范基于星空旗舰版开发规范文档创建",
+    "当前为模板版本，包含通用规则和最佳实践",
+    "后续可根据具体项目需求补充详细规则"
+  ],
+  "checker": {
+    "enabled": true,
+    "module": ".bos-flow/lib/standards-checker.js"
+  },
+  "training_data": {
+    "enabled": true,
+    "file": ".bos-flow/standards/training-data.json"
+  }
+}

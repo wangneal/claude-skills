@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-05-02",
+  "practices": [
+    {
+      "id": "form-plugin-validation",
+      "category": "plugin-development",
+      "title": "表单插件数据验证",
+      "keywords": ["验证", "validation", "表单", "form", "plugin", "validate"],
+      "description": "在表单插件中实现数据验证的最佳实践，包括必填项检查、数据格式验证、业务规则验证",
+      "code_example": "examples/FormPlugin-Enhanced.java",
+      "related_standards": ["standards/exception-handling.md", "standards/sdk-usage.md"]
+    },
+    {
+      "id": "list-plugin-development",
+      "category": "plugin-development",
+      "title": "列表插件开发",
+      "keywords": ["列表", "list", "plugin", "query", "grid", "表格"],
+      "description": "列表插件开发最佳实践，包括数据加载、分页、排序、过滤功能实现",
+      "code_example": "examples/ListPlugin-Enhanced.java",
+      "related_standards": ["standards/sdk-usage.md", "standards/performance.md"]
+    },
+    {
+      "id": "workflow-plugin",
+      "category": "plugin-development",
+      "title": "工作流插件开发",
+      "keywords": ["工作流", "workflow", "审批", "approve", "流程", "plugin"],
+      "description": "工作流插件开发最佳实践，包括审批逻辑、流程状态处理、任务分配",
+      "code_example": "examples/WorkflowPlugin-Enhanced.java",
+      "related_standards": ["standards/exception-handling.md", "standards/sdk-usage.md"]
+    },
+    {
+      "id": "report-plugin",
+      "category": "plugin-development",
+      "title": "报表插件开发",
+      "keywords": ["报表", "report", "plugin", "data", "统计"],
+      "description": "报表插件开发最佳实践，包括数据提取、格式化、汇总计算",
+      "code_example": "examples/ReportPlugin-Enhanced.java",
+      "related_standards": ["standards/performance.md", "standards/code-format.md"]
+    },
+    {
+      "id": "exception-handling",
+      "category": "code-standards",
+      "title": "异常处理最佳实践",
+      "keywords": ["异常", "exception", "error", "处理", "handle", "try", "catch"],
+      "description": "金蝶插件开发中的异常处理规范，包括异常分类、捕获策略、日志记录",
+      "code_example": "examples/ExceptionTemplates.java",
+      "related_standards": ["standards/exception-handling.md", "standards/logging.md"]
+    },
+    {
+      "id": "naming-conventions",
+      "category": "code-standards",
+      "title": "命名规范",
+      "keywords": ["命名", "naming", "规范", "convention", "class", "method", "variable"],
+      "description": "Java 代码命名规范，包括类名、方法名、变量名、常量名的命名规则",
+      "code_example": null,
+      "related_standards": ["standards/naming-conventions.md"]
+    },
+    {
+      "id": "code-comments",
+      "category": "code-standards",
+      "title": "代码注释规范",
+      "keywords": ["注释", "comment", "javadoc", "文档", "doc"],
+      "description": "代码注释规范，包括 Javadoc 注释、行内注释、注释内容要求",
+      "code_example": null,
+      "related_standards": ["standards/comments.md"]
+    },
+    {
+      "id": "db-optimization",
+      "category": "performance",
+      "title": "数据库操作优化",
+      "keywords": ["数据库", "database", "优化", "optimization", "query", "sql", "性能"],
+      "description": "数据库操作性能优化最佳实践，包括查询优化、批量操作、缓存使用",
+      "code_example": null,
+      "related_standards": ["standards/database-optimization.md"]
+    },
+    {
+      "id": "permission-control",
+      "category": "permission",
+      "title": "权限控制最佳实践",
+      "keywords": ["权限", "permission", "控制", "security", "access", "安全"],
+      "description": "金蝶系统权限控制最佳实践，包括数据权限、功能权限、字段权限",
+      "code_example": null,
+      "related_standards": ["standards/permission-control.md", "standards/business-rules.md"]
+    },
+    {
+      "id": "dynamic-object-usage",
+      "category": "sdk-usage",
+      "title": "DynamicObject 使用规范",
+      "keywords": ["DynamicObject", "entity", "数据", "entity", "bo"],
+      "description": "DynamicObject 对象的正确使用方式，包括加载、保存、属性访问",
+      "code_example": "examples/SalesOrderFormPlugin.java",
+      "related_standards": ["standards/sdk-usage.md"]
+    }
+  ]
+}

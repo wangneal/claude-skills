@@ -1,0 +1,12 @@
+{
+  "lastCrawlTime": null,
+  "articlesCrawled": {
+    "BOS平台": true,
+    "安装部署": true,
+    "性能知识": true,
+    "部署运维": true,
+    "财务会计": true
+  },
+  "qaCrawled": {},
+  "knowledgeCrawled": {}
+}

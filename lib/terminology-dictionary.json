@@ -1,0 +1,163 @@
+{
+  "description": "金蝶业务术语词典 - 核心业务领域术语定义",
+  "version": "1.0.0",
+  "lastUpdated": "2026-05-02",
+  "domains": {
+    "销售": {
+      "terms": [
+        {
+          "term": "销售订单",
+          "synonyms": ["SalesOrder", "SO", "Sales Order", "销售单"],
+          "domain": "销售",
+          "relatedEntities": ["customer", "contract"]
+        },
+        {
+          "term": "客户",
+          "synonyms": ["Customer", "Cust", "客户档案"],
+          "domain": "销售",
+          "relatedEntities": ["sale_order"]
+        },
+        {
+          "term": "合同",
+          "synonyms": ["Contract", "ContractInfo", "销售合同"],
+          "domain": "销售",
+          "relatedEntities": ["sale_order"]
+        },
+        {
+          "term": "报价",
+          "synonyms": ["Quotation", "Quote", "报价单"],
+          "domain": "销售",
+          "relatedEntities": ["sale_order", "customer"]
+        },
+        {
+          "term": "销售机会",
+          "synonyms": ["SalesChance", "Opportunity", "商机"],
+          "domain": "销售",
+          "relatedEntities": ["customer"]
+        }
+      ]
+    },
+    "采购": {
+      "terms": [
+        {
+          "term": "采购订单",
+          "synonyms": ["PurchaseOrder", "PO", "Purchase Order", "采购单"],
+          "domain": "采购",
+          "relatedEntities": ["supplier"]
+        },
+        {
+          "term": "供应商",
+          "synonyms": ["Supplier", "Vendor", "供货商"],
+          "domain": "采购",
+          "relatedEntities": ["purchase_order"]
+        },
+        {
+          "term": "采购申请",
+          "synonyms": ["PurchaseRequest", "PR", "采购需求"],
+          "domain": "采购",
+          "relatedEntities": ["purchase_order"]
+        },
+        {
+          "term": "询价单",
+          "synonyms": ["Inquiry", "RFQ", "询价"],
+          "domain": "采购",
+          "relatedEntities": ["purchase_order", "supplier"]
+        },
+        {
+          "term": "采购合同",
+          "synonyms": ["PurchaseContract", "采购协议"],
+          "domain": "采购",
+          "relatedEntities": ["purchase_order", "supplier"]
+        }
+      ]
+    },
+    "库存": {
+      "terms": [
+        {
+          "term": "库存",
+          "synonyms": ["Inventory", "Stock", "物料库存"],
+          "domain": "库存",
+          "relatedEntities": ["warehouse"]
+        },
+        {
+          "term": "仓库",
+          "synonyms": ["Warehouse", "WH", "仓库档案"],
+          "domain": "库存",
+          "relatedEntities": ["inventory"]
+        },
+        {
+          "term": "批次",
+          "synonyms": ["Lot", "Batch", "批号"],
+          "domain": "库存",
+          "relatedEntities": ["inventory"]
+        },
+        {
+          "term": "序列号",
+          "synonyms": ["SerialNumber", "SN", "序列号管理"],
+          "domain": "库存",
+          "relatedEntities": ["inventory"]
+        },
+        {
+          "term": "即时库存",
+          "synonyms": ["CurrentStock", "OnHandStock", "现有量"],
+          "domain": "库存",
+          "relatedEntities": ["inventory", "warehouse"]
+        }
+      ]
+    },
+    "财务": {
+      "terms": [
+        {
+          "term": "科目",
+          "synonyms": ["Account", "会计科目", "AccountInfo"],
+          "domain": "财务",
+          "relatedEntities": ["invoice"]
+        },
+        {
+          "term": "发票",
+          "synonyms": ["Invoice", "税务发票", "InvoiceInfo"],
+          "domain": "财务",
+          "relatedEntities": ["sale_order", "purchase_order"]
+        },
+        {
+          "term": "收款",
+          "synonyms": ["ReceiveMoney", "收款单", "AR"],
+          "domain": "财务",
+          "relatedEntities": ["sale_order", "customer"]
+        },
+        {
+          "term": "付款",
+          "synonyms": ["PayMoney", "付款单", "AP"],
+          "domain": "财务",
+          "relatedEntities": ["purchase_order", "supplier"]
+        },
+        {
+          "term": "应收应付",
+          "synonyms": ["ARAP", "Receivable", "Payable", "应收账款", "应付账款"],
+          "domain": "财务",
+          "relatedEntities": ["customer", "supplier"]
+        }
+      ]
+    }
+  },
+  "crossDomainTerms": [
+    {
+      "term": "审批流程",
+      "synonyms": ["Workflow", "审批", "工作流", "WorkflowService"],
+      "domain": "通用",
+      "relatedEntities": ["sale_order", "purchase_order", "invoice"]
+    },
+    {
+      "term": "权限控制",
+      "synonyms": ["Permission", "权限", "PermissionService"],
+      "domain": "通用",
+      "relatedEntities": []
+    },
+    {
+      "term": "单据编号",
+      "synonyms": ["BillNo", "单据号", "NumberRule"],
+      "domain": "通用",
+      "relatedEntities": []
+    }
+  ]
+}

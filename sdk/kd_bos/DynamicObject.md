@@ -1,0 +1,437 @@
+# DynamicObject
+
+
+**包路径**: kd.bos.dataentity.entity
+
+**类型**: CLASS
+
+**父类**: kd.bos.dataentity.entity.DataEntityBase
+
+**实现接口**: java.io.Serializable
+
+**说明**: 动态实体对象,对应ORM的持久化对象
+
+ 单据采用此对象存储数据(单据数据包)
+
+
+```java
+public class DynamicObject extends kd.bos.dataentity.entity.DataEntityBase implements java.io.Serializable
+```
+
+
+## 方法 (46 个)
+
+
+### `DynamicObject`
+
+```java
+DynamicObject()
+```
+
+构造函数
+
+
+### `DynamicObject`
+
+```java
+DynamicObject(kd.bos.dataentity.metadata.dynamicobject.DynamicObjectType, java.lang.Object)
+```
+
+构造函数
+
+
+### `DynamicObject`
+
+```java
+DynamicObject(kd.bos.dataentity.metadata.dynamicobject.DynamicObjectType)
+```
+
+构造函数
+
+
+### `DynamicObject`
+
+```java
+DynamicObject(kd.bos.dataentity.metadata.dynamicobject.DynamicObjectType, boolean)
+```
+
+构造函数
+
+
+### `OnPropertyChanged`
+
+```java
+void OnPropertyChanged(java.beans.PropertyChangeEvent)
+```
+
+触发属性改变事件
+
+
+### `containsProperty`
+
+```java
+boolean containsProperty(java.lang.String)
+```
+
+返回属性是否存在
+
+
+### `createDataStorage`
+
+```java
+kd.bos.dataentity.entity.IDataStorage createDataStorage()
+```
+
+创建动态实体的本地值存储策略
+
+
+### `get`
+
+```java
+java.lang.Object get(java.lang.String)
+```
+
+返回此实体中指定属性名称的值
+
+
+### `get`
+
+```java
+java.lang.Object get(int)
+```
+
+返回此实体中指定位置的数据
+
+
+### `get`
+
+```java
+java.lang.Object get(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+返回此实体中指定属性对象的数据
+
+
+### `getBigDecimal`
+
+```java
+java.math.BigDecimal getBigDecimal(java.lang.String)
+```
+
+获取下级属性值，把值转为BigDecimal类型返回
+
+
+### `getBigDecimal`
+
+```java
+java.math.BigDecimal getBigDecimal(java.lang.String, boolean)
+```
+
+获取下级属性值，把值转为BigDecimal类型返回
+
+
+### `getBigDecimal`
+
+```java
+java.math.BigDecimal getBigDecimal(int)
+```
+
+获取下级属性值，把值转为BigDecimal类型返回
+
+
+### `getBigDecimal`
+
+```java
+java.math.BigDecimal getBigDecimal(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为BigDecimal类型返回
+
+
+### `getBoolean`
+
+```java
+boolean getBoolean(java.lang.String)
+```
+
+获取下级属性值，把值转为Boolean类型返回
+
+
+### `getBoolean`
+
+```java
+boolean getBoolean(int)
+```
+
+获取下级属性值，把值转为Boolean类型返回
+
+
+### `getBoolean`
+
+```java
+boolean getBoolean(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为Boolean类型返回
+
+
+### `getDataEntityType`
+
+```java
+kd.bos.dataentity.metadata.IDataEntityType getDataEntityType()
+```
+
+返回当前实体的数据类型
+
+
+### `getDate`
+
+```java
+java.util.Date getDate(java.lang.String)
+```
+
+获取下级属性值，把值转为Date类型返回
+
+
+### `getDate`
+
+```java
+java.util.Date getDate(int)
+```
+
+获取下级属性值，把值转为Date类型返回
+
+
+### `getDate`
+
+```java
+java.util.Date getDate(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为Date类型返回
+
+
+### `getDynamicObject`
+
+```java
+kd.bos.dataentity.entity.DynamicObject getDynamicObject(java.lang.String)
+```
+
+获取下级属性值，把值转为动态实体对象类型返回
+
+
+### `getDynamicObject`
+
+```java
+kd.bos.dataentity.entity.DynamicObject getDynamicObject(int)
+```
+
+获取下级属性值，把值转为动态实体对象类型返回
+
+
+### `getDynamicObject`
+
+```java
+kd.bos.dataentity.entity.DynamicObject getDynamicObject(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为动态实体对象类型返回
+
+
+### `getDynamicObjectCollection`
+
+```java
+kd.bos.dataentity.entity.DynamicObjectCollection getDynamicObjectCollection(java.lang.String)
+```
+
+根据属性名称获取动态实体集合对象
+
+
+### `getDynamicObjectCollection`
+
+```java
+kd.bos.dataentity.entity.DynamicObjectCollection getDynamicObjectCollection(int)
+```
+
+根据序号获取动态实体集合对象
+
+
+### `getDynamicObjectCollection`
+
+```java
+kd.bos.dataentity.entity.DynamicObjectCollection getDynamicObjectCollection(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+根据实体属性对象获取动态实体集合对象
+
+
+### `getDynamicObjectType`
+
+```java
+kd.bos.dataentity.metadata.dynamicobject.DynamicObjectType getDynamicObjectType()
+```
+
+返回当前实体的动态实体类型
+
+
+### `getInt`
+
+```java
+int getInt(java.lang.String)
+```
+
+获取下级属性值，把值转为Integer类型返回
+
+
+### `getInt`
+
+```java
+int getInt(int)
+```
+
+获取下级属性值，把值转为Integer类型返回
+
+
+### `getInt`
+
+```java
+int getInt(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为Integer类型返回
+
+
+### `getLastDirty`
+
+```java
+java.util.BitSet getLastDirty()
+```
+
+获取最后一次修改脏标志，缓存反序列化回来为空，属性修改后变化，用于缓存同步比较
+
+
+### `getLocaleString`
+
+```java
+kd.bos.dataentity.entity.ILocaleString getLocaleString(java.lang.String)
+```
+
+获取下级属性值，把值转为多语言字符串类型返回
+
+
+### `getLocaleString`
+
+```java
+kd.bos.dataentity.entity.ILocaleString getLocaleString(int)
+```
+
+获取下级属性值，把值转为多语言字符串类型返回
+
+
+### `getLocaleString`
+
+```java
+kd.bos.dataentity.entity.ILocaleString getLocaleString(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为多语言字符串类型返回
+
+
+### `getLong`
+
+```java
+long getLong(java.lang.String)
+```
+
+获取下级属性值，把值转为Long类型返回
+
+
+### `getLong`
+
+```java
+long getLong(int)
+```
+
+获取下级属性值，把值转为Long类型返回
+
+
+### `getLong`
+
+```java
+long getLong(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为Long类型返回
+
+
+### `getString`
+
+```java
+java.lang.String getString(java.lang.String)
+```
+
+获取下级属性值，把值转为字符串类型返回
+
+
+### `getString`
+
+```java
+java.lang.String getString(int)
+```
+
+获取下级属性值，把值转为字符串类型返回
+
+
+### `getString`
+
+```java
+java.lang.String getString(kd.bos.dataentity.metadata.IDataEntityProperty)
+```
+
+获取下级属性值，把值转为字符串类型返回
+
+
+### `isQueryObj`
+
+```java
+boolean isQueryObj()
+```
+
+是否查询对象
+
+
+### `set`
+
+```java
+void set(java.lang.String, java.lang.Object)
+```
+
+设置实体中指定属性名称的值
+
+
+### `set`
+
+```java
+void set(int, java.lang.Object)
+```
+
+设置实体中指定位置的值
+
+
+### `set`
+
+```java
+void set(kd.bos.dataentity.metadata.IDataEntityProperty, java.lang.Object)
+```
+
+设置实体中指定实体属性对象的值
+
+
+### `toString`
+
+```java
+java.lang.String toString()
+```
+
+重写toString方法，返回动态对象类型的名称+存储器的toString
+

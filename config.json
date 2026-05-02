@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "name": "bos-flow",
+  "description": "金蝶苍穹开发工作流",
+  "community": {
+    "enabled": true,
+    "autoCrawl": false,
+    "crawlInterval": "daily",
+    "categories": ["BOS平台", "协同开发", "财务会计", "供应链"]
+  },
+  "phases": [
+    {
+      "id": 1,
+      "name": "框架基础",
+      "slug": "framework",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "name": "SDK集成",
+      "slug": "sdk-integration",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "name": "阶段模板",
+      "slug": "templates",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "name": "工具封装",
+      "slug": "tools",
+      "status": "pending"
+    }
+  ],
+  "config": {
+    "mode": "yolo",
+    "auto_advance": true,
+    "sdk_path": "C:\\Users\\Neal\\Desktop\\苍穹V5_SDK知识库"
+  }
+}

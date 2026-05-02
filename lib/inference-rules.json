@@ -1,0 +1,192 @@
+{
+  "description": "隐含需求推断规则库 - 基于金蝶业务场景的隐含需求识别规则",
+  "version": "1.0.0",
+  "lastUpdated": "2026-05-02",
+  "rules": [
+    {
+      "id": "approval_implies_permission",
+      "trigger_keywords": ["审批", "approve", "审核", "审批流程", "审批人", "审批意见"],
+      "implicit_needs": [
+        {
+          "description": "需要权限检查 - 验证用户是否有审批权限",
+          "sdk_services": ["PermissionServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要工作流服务 - 启动或处理审批流程",
+          "sdk_services": ["WorkflowServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要消息通知 - 审批完成后通知申请人",
+          "sdk_services": ["MessageServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "save_implies_validation",
+      "trigger_keywords": ["保存", "save", "存储", "提交保存"],
+      "implicit_needs": [
+        {
+          "description": "需要数据验证 - 保存前验证数据合法性",
+          "sdk_services": ["Validator"],
+          "priority": "high"
+        },
+        {
+          "description": "需要持久化服务 - 保存数据到数据库",
+          "sdk_services": ["BusinessDataServiceHelper"],
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "submit_implies_workflow",
+      "trigger_keywords": ["提交", "submit", "上报", "送审"],
+      "implicit_needs": [
+        {
+          "description": "需要工作流服务 - 提交流程启动审批",
+          "sdk_services": ["WorkflowServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要状态更新 - 更新单据状态",
+          "sdk_services": ["BusinessDataServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要事件触发 - 提交触发业务事件",
+          "sdk_services": ["OperationServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "query_implies_pagination",
+      "trigger_keywords": ["查询", "query", "列表", "检索", "搜索", "过滤"],
+      "implicit_needs": [
+        {
+          "description": "需要分页处理 - 大数据量分页展示",
+          "sdk_services": ["QueryServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要权限过滤 - 只返回有权限的数据",
+          "sdk_services": ["PermissionServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要排序功能 - 支持多字段排序",
+          "sdk_services": ["QueryServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "print_implies_print_service",
+      "trigger_keywords": ["打印", "print", "导出PDF", "报表打印"],
+      "implicit_needs": [
+        {
+          "description": "需要打印服务 - 实现打印逻辑",
+          "sdk_services": ["PrintServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要单据数据获取 - 打印内容来源于单据",
+          "sdk_services": ["QueryServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "import_export_data",
+      "trigger_keywords": ["导入", "import", "导出", "export", "批量导入", "批量导出", "Excel导入", "Excel导出"],
+      "implicit_needs": [
+        {
+          "description": "需要数据转换服务 - Excel/CSV 与业务对象转换",
+          "sdk_services": ["DataImportExportServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要数据验证 - 导入数据合法性检查",
+          "sdk_services": ["Validator"],
+          "priority": "high"
+        },
+        {
+          "description": "需要日志记录 - 记录导入导出操作",
+          "sdk_services": ["LoggingServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "customer_related",
+      "trigger_keywords": ["客户", "customer", "客户档案", "客户信息"],
+      "implicit_needs": [
+        {
+          "description": "需要客户数据服务 - 获取/保存客户信息",
+          "sdk_services": ["BusinessDataServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要权限控制 - 客户数据访问权限",
+          "sdk_services": ["PermissionServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "inventory_related",
+      "trigger_keywords": ["库存", "inventory", "stock", "物料", "批次", "序列号"],
+      "implicit_needs": [
+        {
+          "description": "需要库存服务 - 库存查询和更新",
+          "sdk_services": ["InventoryServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要批次/序列号管理 - 精细库存控制",
+          "sdk_services": ["BatchServiceHelper", "SerialNumberServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "financial_related",
+      "trigger_keywords": ["发票", "invoice", "收款", "付款", "应收", "应付", "财务", "accounting"],
+      "implicit_needs": [
+        {
+          "description": "需要财务服务 - 财务数据处理",
+          "sdk_services": ["FinancialServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要凭证生成 - 业务单据生成财务凭证",
+          "sdk_services": ["VoucherServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "workflow_status_change",
+      "trigger_keywords": ["通过", "approve", "驳回", "reject", "拒绝", "撤回", "撤回"],
+      "implicit_needs": [
+        {
+          "description": "需要工作流状态更新 - 更新审批状态",
+          "sdk_services": ["WorkflowServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要业务逻辑处理 - 根据审批结果执行业务",
+          "sdk_services": ["BusinessDataServiceHelper", "OperationServiceHelper"],
+          "priority": "high"
+        },
+        {
+          "description": "需要消息通知 - 通知相关人员审批结果",
+          "sdk_services": ["MessageServiceHelper"],
+          "priority": "medium"
+        }
+      ]
+    }
+  ]
+}

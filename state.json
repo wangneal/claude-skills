@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "project": "bos-flow",
+  "current_phase": 4,
+  "sdk_copied": true,
+  "sdk_copy_date": "2026-04-29T14:38:00.000Z",
+  "index_built": true,
+  "index_date": "2026-04-29T14:45:00.000Z",
+  "templates_created": true,
+  "templates_date": "2026-04-29T15:10:00.000Z",
+  "tools_completed": true,
+  "tools_date": "2026-04-29T15:30:00.000Z",
+  "phases": [
+    {
+      "id": 1,
+      "name": "框架基础",
+      "status": "completed",
+      "plans": ["01"],
+      "started_at": "2026-04-29T13:48:47.882Z",
+      "completed_at": "2026-04-29T14:35:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "SDK集成",
+      "status": "completed",
+      "plans": ["01", "02", "03", "04"],
+      "started_at": "2026-04-29T14:38:00.000Z",
+      "completed_at": "2026-04-29T14:51:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "阶段模板",
+      "status": "completed",
+      "plans": ["01", "02", "03", "04"],
+      "started_at": "2026-04-29T15:00:00.000Z",
+      "completed_at": "2026-04-29T15:10:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "工具封装",
+      "status": "completed",
+      "plans": ["01", "02", "03"],
+      "started_at": "2026-04-29T15:15:00.000Z",
+      "completed_at": "2026-04-29T15:30:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "开发规范集成",
+      "status": "completed",
+      "plans": ["01", "02", "03", "04"],
+      "started_at": "2026-04-30T00:00:00.000Z",
+      "completed_at": "2026-04-30T01:00:00.000Z"
+    }
+  ],
+  "standards_integrated": true,
+  "standards_date": "2026-04-30T01:00:00.000Z",
+  "last_updated": "2026-04-30T01:00:00.000Z"
+}
